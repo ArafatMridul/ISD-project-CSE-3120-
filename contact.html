@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Hotel</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="montserrat">
+    <header
+      class="bg-[url(assets/banner.jpg)] bg-cover w-full h-[100%] mb-[83px]"
+    >
+      <!-- Navbar -->
+
+      <section
+        class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px]"
+      >
+        <img
+          src="assets/brand-logo.png"
+          class="w-[128px] h-[74.24px] cursor-pointer"
+          alt=""
+        />
+
+        <ul
+          class="flex flex-col gap-[20px] lg:flex-row lg:gap-[50px] font-bold text-white text-center"
+        >
+          <li class="cursor-pointer">Home</li>
+          <li class="cursor-pointer">Facilities</li>
+          <li class="cursor-pointer">Rooms</li>
+          <li class="cursor-pointer">Contact Us</li>
+          <li class="cursor-pointer">Login</li>
+          <li class="cursor-pointer">Signup</li>
+        </ul>
+      </section>
+
+      <!-- Hero Section -->
+      <section>
+        <div
+          class="text-white flex flex-col items-center text-center lg:ml-[212px] lg:items-start lg:text-start ml-[3vw] mb-[50px]"
+        >
+          <p class="text-[30px]">WELCOME TO</p>
+          <p class="text-[70px] font-bold h-[80px] eb-garamond">LUXURY</p>
+          <p class="font-bold text-[40px]">HOTEL</p>
+          <p class="w-full max-w-[572px] lg:text-[25px]">
+            Book your stay and enjoy Luxury<br />
+            redefined at the most affordable rates.
+          </p>
+        </div>
+
+        <button
+          class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in"
+        >
+          <img src="assets/booking.png" alt="" /><span class="text-white"
+            >BOOK NOW</span
+          >
+        </button>
+
+        <div class="flex flex-col items-center mx-auto w-[79px] pb-[38px]">
+          <p class="text-[20px] text-white font-bold">Scroll</p>
+          <i
+            class="fa-solid fa-circle-down text-white text-[30px] cursor-pointer"
+          ></i>
+        </div>
+      </section>
+    </header>
+
+
+    <main>
+      <!-- form start -->
+      <form class="form w-96 bg-white rounded-2xl shadow-2xl shadow-black/60 p-6 mx-auto mt-3 mb-3">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4 text-center">
+          Contact Us
+        </h2>
+
+        <label for="fname" class="block text-yellow-600 font-medium"
+          >Name:</label
+        >
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          class="w-full mt-1 mb-4 px-3 py-2 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+
+        <label for="email" class="block text-yellow-600 font-medium"
+          >Email:</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="w-full mt-1 mb-4 px-3 py-2 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+
+        <label for="message" class="block text-yellow-600 font-medium"
+          >Message:</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          class="w-full mt-1 mb-4 px-3 py-2 border border-yellow-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="w-full bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors"
+        >
+          Submit
+        </button>
+      </form>
+
+      <!-- Form end -->
+    </main>
+
+    <footer
+      class="bg-[#14274A] flex flex-col gap-[50px] h-auto min-h-[320px] items-center lg:flex-row lg:justify-around py-[20px]"
+    >
+      <div class="flex flex-col items-center lg:items-start gap-[30px]">
+        <div
+          class="flex flex-col text-center w-[118px] h-auto text-white eb-garamond font-bold"
+        >
+          <p class="text-[25px]">LUXURY</p>
+          <p class="text-[14px]">HOTEL</p>
+        </div>
+        <div class="text-white text-[14px] text-center lg:text-start">
+          Fulbari Gate, Khulna<br />
+          +8801712345678<br />
+          luxury_hotel@gmail.com
+        </div>
+      </div>
+
+      <div class="flex gap-[50px]">
+        <div>
+          <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
+            <li class="cursor-pointer">About Us</li>
+            <li class="cursor-pointer">Contact</li>
+            <li class="cursor-pointer">Terms & Conditions</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
+            <li class="flex gap-[20px] items-center cursor-pointer">
+              <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
+            </li>
+            <li class="flex gap-[20px] items-center cursor-pointer">
+              <i class="fa-brands fa-twitter"></i><span>Twitter</span>
+            </li>
+            <li class="flex gap-[20px] items-center cursor-pointer">
+              <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-white font-bold gap-[30px] lg:items-start"
+      >
+        <p>Subscribe to our newsletter</p>
+        <form class="flex" action="">
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            class="w-full max-w-[280px] h-[52px] box-border px-[26px] py-[15px] rounded-l-[5px] border-[#E0B973] border-2 placeholder:text-white"
+            placeholder="Email Address"
+          /><button
+            class="w-[80px] h-[52-px] text-black text-[16px] bg-[#E0B973]"
+          >
+            OK
+          </button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
