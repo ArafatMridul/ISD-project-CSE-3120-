@@ -34,46 +34,40 @@
 
   <body class="montserrat">
     <header
-      class="bg-blue-950 bg-cover w-full h-[45vh] mb-[83px]"
+      class="bg-blue-950 bg-cover w-full h-auto mb-[83px]"
     >
       <!-- Navbar -->
 
       <section
         class="flex flex-col items-center gap-[20px] mb-[10px] lg:flex-row lg:justify-around lg:mb-[15px]"
       >
-        <img
-          src="assets/brand-logo.png"
-          class="w-[128px] h-[74.24px] cursor-pointer"
-          alt=""
-        />
+        <img src="assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer" alt="" />
 
-        <ul
-          class="flex flex-col gap-[20px] lg:flex-row lg:gap-[50px] font-bold text-white text-center"
-        >
-          <li class="cursor-pointer">
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li class="cursor-pointer">
-                        <a href="./facilities">Facilities</a>
-                    </li>
-                    <li class="cursor-pointer"><a href="./rooms">Rooms</a></li>
-                    <li class="cursor-pointer">
-                        <a href="./contact.html">Contact Us</a>
-                    </li>
-                    <li class="cursor-pointer"><a href="./login">Login</a></li>
-                    <li class="cursor-pointer">
-                        <a href="./signup">Signup</a>
-                    </li>
-        </ul>
+            <ul class="flex flex-col gap-[20px] lg:flex-row lg:gap-[50px] font-bold text-white text-center">
+                <li class="cursor-pointer">
+                    <a href="./index.html" class="hover:text-[#e0b973] duration-500 ease-in">Home</a>
+                </li>
+                <li class="cursor-pointer">
+                    <a href="./facilities" class="hover:text-[#e0b973] duration-500 ease-in">Facilities</a>
+                </li>
+                <li class="cursor-pointer"><a href="./rooms" class="hover:text-[#e0b973] duration-500 ease-in">Rooms</a></li>
+                <li class="cursor-pointer">
+                    <a href="./contact.html" class="hover:text-[#e0b973] duration-500 ease-in">Contact Us</a>
+                </li>
+                <li class="cursor-pointer"><a href="./login" class="hover:text-[#e0b973] duration-500 ease-in">Login</a></li>
+                <li class="cursor-pointer">
+                    <a href="./signup" class="hover:text-[#e0b973] duration-500 ease-in">Signup</a>
+                </li>
+            </ul>
       </section>
 
       <!-- Hero Section -->
       <section>
         <div
-          class="text-white flex flex-col items-center text-center lg:ml-[212px] lg:items-start lg:text-start ml-[3vw] mb-[50px]"
+          class="text-white flex flex-col items-center text-center lg:ml-[212px] lg:items-start lg:text-start mb-[50px]"
         >
           
-          <p class="text-[10vw] font-bold h-[80px] eb-garamond">Contact Us</p>
+          <p class="text-[80px] font-bold eb-garamond">Contact Us</p>
           
         </div>
 
@@ -92,20 +86,20 @@
         and we will get back to you as soon as possible.
       </p>
     </div>
-      <div class="address-contact grid grid-cols-2 items-center">
+      <div class="address-contact grid grid-cols-1 gap-[20px] lg:grid-cols-2 items-center">
         <div class="font-medium mx-auto text-xl">
           <span class="font-bold text-4xl">Our address: </span><br>
           <span>52/A, block no: 51, Street : 44 <br> Khulna , Bangladesh</span><br><br>
           <span>Phone : +880 139 089 90</span><br>
           <span>Email: hotel@gamil.com</span><br><br><br>
-          <span class="font-bold text-blue-950">View in map</span>
-          <i class="fa-solid fa-arrow-right text-blue-950"></i>
+          <span class="font-bold text-[#14274A]">View in map</span>
+          <i class="fa-solid fa-arrow-right text-[#14274A]"></i>
         </div>
       <!-- form start -->
       <form
-        class="form w-96 bg-white rounded-2xl shadow-2xl shadow-black/60 p-6 mx-auto mt-3 mb-3"
+        class="form w-full max-w-96 box-border bg-white rounded-2xl shadow-2xl shadow-black/60 p-6 mx-auto mt-3 mb-3"
       >
-        <h2 class="text-2xl font-bold text-blue-600 mb-4 text-center">
+        <h2 class="text-2xl font-bold text-[#14274A] mb-4 text-center">
           Contact Us
         </h2>
 
@@ -153,63 +147,53 @@
     </main>
 
     <footer
-      class="bg-[#14274A] flex flex-col gap-[50px] h-auto min-h-[320px] items-center lg:flex-row lg:justify-around py-[20px]"
-    >
-      <div class="flex flex-col items-center lg:items-start gap-[30px]">
-        <div
-          class="flex flex-col text-center w-[118px] h-auto text-white eb-garamond font-bold"
-        >
-          <p class="text-[25px]">LUXURY</p>
-          <p class="text-[14px]">HOTEL</p>
+        class="bg-[#14274A] flex flex-col gap-[50px] h-auto min-h-[320px] items-center lg:flex-row lg:justify-around py-[20px]">
+        <div class="flex flex-col items-center lg:items-start gap-[30px]">
+            <div class="flex flex-col text-center w-[118px] h-auto text-white eb-garamond font-bold">
+                <p class="text-[25px]">LUXURY</p>
+                <p class="text-[14px]">HOTEL</p>
+            </div>
+            <div class="text-white text-[14px] text-center lg:text-start">
+                Fulbari Gate, Khulna<br />
+                +8801712345678<br />
+                luxury_hotel@gmail.com
+            </div>
         </div>
-        <div class="text-white text-[14px] text-center lg:text-start">
-          Fulbari Gate, Khulna<br />
-          +8801712345678<br />
-          luxury_hotel@gmail.com
-        </div>
-      </div>
 
-      <div class="flex gap-[50px]">
-        <div>
-          <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
-            <li class="cursor-pointer">About Us</li>
-            <li class="cursor-pointer">Contact</li>
-            <li class="cursor-pointer">Terms & Conditions</li>
-          </ul>
+        <div class="flex gap-[50px]">
+            <div>
+                <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
+                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">About Us</a></li>
+                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">Contact</a></li>
+                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
+                    <li class="cursor-pointer">
+                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div>
-          <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
-            <li class="flex gap-[20px] items-center cursor-pointer">
-              <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
-            </li>
-            <li class="flex gap-[20px] items-center cursor-pointer">
-              <i class="fa-brands fa-twitter"></i><span>Twitter</span>
-            </li>
-            <li class="flex gap-[20px] items-center cursor-pointer">
-              <i class="fa-brands fa-instagram"></i><span>Instagram</span>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div
-        class="flex flex-col items-center text-white font-bold gap-[30px] lg:items-start"
-      >
-        <p>Subscribe to our newsletter</p>
-        <form class="flex" action="">
-          <input
-            type="email"
-            name="user-email"
-            id="user-email"
-            class="w-full max-w-[280px] h-[52px] box-border px-[26px] py-[15px] rounded-l-[5px] border-[#E0B973] border-2 placeholder:text-white"
-            placeholder="Email Address"
-          /><button
-            class="w-[80px] h-[52-px] text-black text-[16px] bg-[#E0B973]"
-          >
-            OK
-          </button>
-        </form>
-      </div>
+        <div class="flex flex-col items-center text-white font-bold gap-[30px] lg:items-start">
+            <p>Subscribe to our newsletter</p>
+            <form class="flex" action="">
+                <input type="email" name="user-email" id="user-email"
+                    class="w-full max-w-[280px] h-[52px] box-border px-[26px] py-[15px] rounded-l-[5px] border-[#E0B973] border-2 placeholder:text-white"
+                    placeholder="Email Address" /><button
+                    class="w-[80px] h-[52-px] text-black text-[16px] bg-[#E0B973] rounded-r-[5px]">
+                    OK
+                </button>
+            </form>
+        </div>
     </footer>
   </body>
 </html>
