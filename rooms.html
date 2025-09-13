@@ -34,12 +34,12 @@
 
     <body class="montserrat">
         <header
-            class="bg-[url(assets/banner3.jpg)] bg-cover w-full h-[100%] mb-[83px]"
+            class="bg-[url(assets/banner3.jpg)] relative bg-cover w-full h-[100%] mb-[83px]"
         >
             <!-- Navbar -->
-
+            <div class="absolute bg-black/40 inset-0 z-10"></div>
             <section
-                class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px]"
+                class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px] relative z-50"
             >
                 <img
                     src="assets/brand-logo.png"
@@ -96,7 +96,7 @@
             </section>
 
             <!-- Hero Section -->
-            <section>
+            <section class="relative z-50">
                 <div
                     class="text-white flex flex-col items-center text-center lg:ml-[212px] lg:items-start lg:text-start mb-[50px]"
                 >
@@ -115,7 +115,7 @@
                     class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in"
                 >
                     <img src="assets/booking.png" alt="" /><span
-                        class="text-white"
+                        class="text-white font-extrabold"
                         >BOOK NOW</span
                     >
                 </button>
@@ -146,7 +146,7 @@
                 nature’s palette as visible from our rooms’ sea-view windows and
                 terraces.
             </p>
-            <div class="grid gap-46 px-6 lg:px-0 lg:w-[1400px] mx-auto">
+            <div class="grid gap-46 px-6 lg:px-0 lg:max-w-[1400px] mx-auto">
                 <!-- CARD-1 -->
                 <div class="border-2 border-slate-500 rounded-xl overflow-clip">
                     <img src="./assets/rooms/single.png" alt="" class="w-full" />
