@@ -1,51 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Luxury Hotel | Login</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Hotel | Login</title>
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- Font Awesome -->
 
-    <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
 
-    <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+        <!-- css -->
 
-    <!-- css -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 
-    <link rel="stylesheet" href="css/style.css" />
-</head>
+    <body
+        class="montserrat bg-[url(assets/login-and-signup/login-page.jpg)] bg-cover bg-center bg-no-repeat bg-fixed flex justify-end h-[100vh]"
+    >
+        <main
+            class="w-full w-full lg:max-w-[50%] h-[100vh] bg-[#14274A]/60 flex flex-col justify-between items-center"
+        >
+            <div
+                class="w-full h-full flex flex-col items-center justify-center gap-[30px]"
+            >
+                <p
+                    class="text-white text-[15px] font-bold eb-garamond mt-[30px] lg:text-[30px]"
+                >
+                    WELCOME BACK!
+                </p>
+                <form
+                    action=""
+                    class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]"
+                >
+                    <label
+                        for="email"
+                        class="font-bold text-[15px] eb-garamond text-white lg:text-[20px]"
+                        >Email</label
+                    >
 
-<body class="montserrat bg-[url(assets/login-and-signup/login-page.jpg)] bg-cover bg-center bg-no-repeat bg-fixed flex justify-end h-[100vh]">
-    <main class="w-full max-w-[50%] h-[100vh] bg-[#14274A]/60 flex flex-col justify-between items-center">
-        <div class="w-full h-full flex flex-col items-center justify-center gap-[30px]">
-            <p class="text-white text-[15px] font-bold eb-garamond mt-[30px] lg:text-[30px]">WELCOME BACK!</p>
-            <form action="" class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]">
-                <label for="email" class="font-bold text-[15px] eb-garamond text-white lg:text-[20px]">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="example@email.com"
+                        class="bg-white w-full max-w-[497px] h-[30px] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[10px] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] md:text-[15px] lg:px-[32px] lg:py-[10px] lg:text-[20px] lg:h-[50px] lg:rounded-[10px]"
+                    />
 
-                <input type="email" name="email" id="email" placeholder="example@email.com" class="bg-white w-full max-w-[497px] h-[30px] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[10px] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] md:text-[15px] lg:px-[32px] lg:py-[10px] lg:text-[20px] lg:h-[50px] lg:rounded-[10px]">
-                
-                <label for="password" class="font-bold text-[15px] eb-garamond text-white lg:text-[20px]">Password</label>
-                <input type="password" name="password" id="password"  placeholder="Password" class="bg-white w-full max-w-[497px] h-[30px] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[10px] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] md:text-[15px] lg:px-[32px] lg:py-[10px] lg:text-[20px] lg:h-[50px] lg:rounded-[10px]">
+                    <label
+                        for="password"
+                        class="font-bold text-[15px] eb-garamond text-white lg:text-[20px]"
+                        >Password</label
+                    >
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                        class="bg-white w-full max-w-[497px] h-[30px] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[10px] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] md:text-[15px] lg:px-[32px] lg:py-[10px] lg:text-[20px] lg:h-[50px] lg:rounded-[10px]"
+                    />
 
-                <p class="self-end eb-garamond text-[10px] text-white font-semibold cursor-pointer hover:text-[#E0B973] duration-500 ease-in lg:text-[15px]">Forgot Password?</p>
-                <input type="button" value="Login" class="w-[100px] h-[30px] bg-[#E0B973] rounded-[10px] text-[12px] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center lg:text-[15px] lg:w-[200px] lg:h-[60px]">
-            </form>
-        </div>
-        <p class="text-white eb-garamond text-[10px] pb-[10px] lg:text-[16px]">© 2025 Luxury Hotel. All rights reserved.</p>
-    </main>
-</body>
+                    <p
+                        class="eb-garamond text-[10px] text-white font-semibold lg:text-[15px] text-end"
+                    >
+                        Don't have an account?
+                        <a
+                            href="./register.html"
+                            class="cursor-pointer hover:text-[#E0B973] duration-500 ease-in underline"
+                            >Register</a
+                        >
+                    </p>
 
+                    <input
+                        type="button"
+                        value="Login"
+                        class="w-[100px] h-[30px] bg-[#E0B973] rounded-[10px] text-[12px] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center lg:text-[15px] lg:w-[200px] lg:h-[60px]"
+                    />
+                </form>
+            </div>
+            <p
+                class="text-white eb-garamond text-[10px] pb-[10px] lg:text-[16px]"
+            >
+                © 2025 Luxury Hotel. All rights reserved.
+            </p>
+        </main>
+    </body>
 </html>
