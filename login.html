@@ -60,7 +60,7 @@
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="example@email.com"
+                        placeholder="example@email.com" required 
                         class="bg-white w-full max-w-[497px] h-[30px] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[10px] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] md:text-[15px] lg:px-[32px] lg:py-[10px] lg:text-[20px] lg:h-[50px] lg:rounded-[10px]"
                     />
 
@@ -73,29 +73,24 @@
                         type="password"
                         name="password"
                         id="password"
-                        placeholder="Password"
+                        placeholder="Password" required 
                         class="bg-white w-full max-w-[497px] h-[30px] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[10px] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] md:text-[15px] lg:px-[32px] lg:py-[10px] lg:text-[20px] lg:h-[50px] lg:rounded-[10px]"
                     />
 
-                    <p
-                        class="eb-garamond text-[10px] text-white font-semibold lg:text-[15px] text-end"
+                    <div class="flex justify-between">
+                        <p
+                        class="eb-garamond text-[10px] text-white font-semibold lg:text-[15px]"
                     >
-                        Don't have an account?
+                        
                         <a
-                            href="./register.html"
-                            class="cursor-pointer hover:text-[#E0B973] duration-500 ease-in underline"
-                            >Register</a
+                            href="register.html"
+                            class="cursor-pointer no-underline hover:text-[#E0B973] duration-500 ease-in "
+                            >Don't have an account?</a
                         >
                     </p>
-                    <p
-                        class="eb-garamond text-[10px] text-white font-semibold lg:text-[15px] text-end"
-                    >
-                        <a
-                            href="./register.html"
-                            class="cursor-pointer hover:text-[#E0B973] duration-500 ease-in underline"
-                            >forgot password</a
-                        >
-                    </p>
+                    <p class="self-end eb-garamond text-[10px] text-white font-semibold cursor-pointer hover:text-[#E0B973] duration-500 ease-in lg:text-[15px]">Forgot Password?</p>
+                    </div>
+                    
 
                     <input
                         type="button"
