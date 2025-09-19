@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Luxury Hotel | Login</title>
 
+        <!-- JS -->
+        <script type="module" src="/js/supabaseConfig.js" defer></script>
+        <script type="module" src="/js/login.js" defer></script>
+
         <!-- Tailwind CDN -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -47,6 +51,7 @@
                     WELCOME BACK!
                 </p>
                 <form
+                    id="loginForm"
                     action=""
                     class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]"
                 >
@@ -60,7 +65,8 @@
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="example@email.com" required 
+                        placeholder="example@email.com"
+                        required
                         class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]"
                     />
 
@@ -73,27 +79,30 @@
                         type="password"
                         name="password"
                         id="password"
-                        placeholder="Password" required 
+                        placeholder="Password"
+                        required
                         class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]"
                     />
 
                     <div class="flex justify-between">
                         <p
-                        class="eb-garamond text-[2vh] text-white font-semibold"
-                    >
-                        
-                        <a
-                            href="./signup.html"
-                            class="cursor-pointer no-underline hover:text-[#E0B973] duration-500 ease-in "
-                            >Don't have an account?</a
+                            class="eb-garamond text-[2vh] text-white font-semibold"
                         >
-                    </p>
-                    <p class="self-end eb-garamond text-[2vh] text-white font-semibold cursor-pointer hover:text-[#E0B973] duration-500 ease-in">Forgot Password?</p>
+                            <a
+                                href="./signup.html"
+                                class="cursor-pointer no-underline hover:text-[#E0B973] duration-500 ease-in"
+                                >Don't have an account?</a
+                            >
+                        </p>
+                        <p
+                            class="self-end eb-garamond text-[2vh] text-white font-semibold cursor-pointer hover:text-[#E0B973] duration-500 ease-in"
+                        >
+                            Forgot Password?
+                        </p>
                     </div>
-                    
 
                     <input
-                        type="button"
+                        type="submit"
                         value="Login"
                         class="w-[100px] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center"
                     />

@@ -1,3 +1,4 @@
+import { supabase } from "./supabaseConfig.js";
 const signupForm = document.getElementById("signupForm");
 
 signupForm.addEventListener("submit", async (e) => {
