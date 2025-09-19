@@ -8,6 +8,9 @@
         <!-- Tailwind CDN -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+        <!-- SUPABASE -->
+        <script type="module" src="/js/supabaseConfig.js" defer></script>
+        <script type="module" src="/js/signup.js" defer></script>
         <!-- Font Awesome -->
 
         <link
@@ -47,6 +50,7 @@
                     What are you waiting for? Register now!
                 </p>
                 <form
+                    id="signupForm"
                     action=""
                     class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]"
                 >
@@ -109,14 +113,14 @@
                     />
 
                     <input
-                        type="button"
+                        type="submit"
                         value="Signup"
                         class="w-[30vw] sm:w-[10vw] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white cursor-pointer hover:bg-[#ffbb3d] duration-100 ease-in self-center lg:text-[3vh]"
                     />
                 </form>
                 <p class="eb-garamond text-[2vh] text-white font-semibold">
                     <a
-                        href="contact.html"
+                        href="./contact.html"
                         class="cursor-pointer no-underline hover:text-[#E0B973] duration-500 ease-in"
                         >Having problem? Contact us</a
                     >
