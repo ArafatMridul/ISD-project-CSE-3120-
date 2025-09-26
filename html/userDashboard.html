@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Luxury Hotel</title>
+
+    <!-- Tailwind CDN and Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="">
+            <!-- Page content here -->
+            <label for="my-drawer-2" class="drawer-button bg-[#14274A] text-white p-2 rounded-md lg:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-200 text-base-content min-h-full w-80 px-4 py-0 bg-[#12439e]">
+                <!-- Sidebar content here -->
+                 <a href=""><img src="/assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer mb-4" alt="" /></a>
+                <li class="eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]"><a href="">My Profile</a></li>
+                <li class="eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]"><a href="">My Bookings</a></li>
+                <li class="eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]"><a href="">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
