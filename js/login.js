@@ -37,16 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("An error occurred: " + err.message);
         }
     });
-});
 
+    // Forgot Password Functionality
 
-// Forgot Password Functionality
-
-document.addEventListener("DOMContentLoaded", () => {
     const forgotBtn = document.querySelector(".forgotBtn");
-    forgotBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        alert("Password reset link has been sent to your email!");
-        document.getElementById("my_modal_3").close();
-    });
+
+    if (forgotBtn) {
+        forgotBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const userEmail = document.getElementById("userEmail").value.trim();
+            if (!userEmail) {
+                alert("Please enter your email!")
+                return;
+            }
+            alert("Password reset link has been sent to your email!");
+            document.getElementById("my_modal_3").close();
+        });
+    }
+
 });
+
+
