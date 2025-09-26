@@ -38,3 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+// Forgot Password Functionality
+
+document.addEventListener("DOMContentLoaded", () => {
+    const forgotBtn = document.querySelector(".forgotBtn");
+    forgotBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Password reset link has been sent to your email!");
+        document.getElementById("my_modal_3").close();
+    });
+});
