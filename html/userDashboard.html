@@ -35,7 +35,7 @@
             <div class="m-4">
                 <!-- Page content here -->
                 <label for="my-drawer-2"
-                    class="cursor-pointer drawer-button bg-[#14274A] text-white p-2 rounded-md lg:hidden">
+                    class="cursor-pointer drawer-button bg-[#14274A] text-white p-2 rounded-md lg:invisible">
                     <i class="fa-solid fa-bars"></i>
                 </label>
             </div>
@@ -43,52 +43,52 @@
                 <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
                 <ul class="menu bg-base-200 text-base-content min-h-full w-80 px-4 py-0 bg-[#14274A]">
                     <!-- Sidebar content here -->
-                    <div class="flex justify-between">
-                        <img src="/assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer mb-4"
+                    <div class="flex justify-between lg:justify-center">
+                        <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer mb-4"
                             onclick="window.location.href='index.html';" alt="" />
                         <i
-                            class="sidebar-close fa-solid fa-circle-xmark text-[20px] text-white hover:text-[#e0b973] cursor-pointer duration-500 ease-in mt-[30px] lg:invisible"></i>
+                            class="sidebarClose fa-solid fa-circle-xmark text-[20px] text-white hover:text-[#e0b973] cursor-pointer duration-500 ease-in mt-[30px] lg:invisible"></i>
                     </div>
 
                     <li
-                        class="eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]">
-                        <a href="">My Profile</a>
+                        class="myProfile eb-garamond font-semibold text-[20px] text-[#e0b973] bg-[#131312] hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]">
+                        <span>My Profile</span>
                     </li>
                     <li
-                        class="eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]">
-                        <a href="">My Bookings</a>
+                        class="myBookings eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]">
+                        <span>My Bookings</span>
+
                     </li>
                     <li
-                        class="eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]">
-                        <a href="">Logout</a>
+                        class="logout eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] duration-500 ease-in mb-[5px]">
+                        <span>Logout</span>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
-    <main
-        class="w-full h-auto lg:max-w-[90%] flex flex-col justify-center items-center">
+    <main class="w-full h-auto lg:max-w-[90%] flex flex-col justify-center items-center">
         <!-- My Profile Section -->
         <section
-            class="w-full max-w-[1200px] h-auto bg-white rounded-[10px]  shadow-md flex flex-col items-center py-[50px] box-border">
-            <p class="name eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]">Welcome <span
+            class="w-full max-w-[1200px] h-auto bg-white rounded-[10px] shadow-md flex flex-col items-center py-[50px] box-border">
+            <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]">Welcome <span
                     class="fullname">User</span>
             </p>
             <div class="w-full flex flex-col items-center gap-[22px] p-[30px] lg:flex-row lg:items-start">
-                <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px]">
-                    <div class="flex flex-col gap-[10px]">
+                <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center">
+                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Full Name</label>
                         <p
                             class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             First Name</p>
                     </div>
-                    <div class="flex flex-col gap-[10px]">
+                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Email Address</label>
                         <p
                             class="emailAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             Email Address</p>
                     </div>
-                    <div class="flex flex-col gap-[10px]">
+                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Contact Number</label>
                         <p
                             class="contactNumber bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
@@ -97,20 +97,20 @@
                 </div>
 
 
-                <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px]">
-                    <div class="flex flex-col gap-[10px]">
+                <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center">
+                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Gender</label>
                         <p
                             class="gender bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             Gender</p>
                     </div>
-                    <div class="flex flex-col gap-[10px]">
+                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Present Address</label>
                         <p
                             class="presentAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             Present Address</p>
                     </div>
-                    <div class="flex flex-col gap-[10px]">
+                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Date of Birth</label>
                         <p
                             class="dob bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
@@ -133,8 +133,23 @@
 
         <!-- My Bookings Section -->
 
-        <section
-            class="hidden items-center justify-center w-full max-w-[90%] bg-[#FFF8E7] h-full border-2 border-green-500">
+        <section class="w-full max-w-[1200px] h-[100vh] bg-[#F8F9FA] hidden flex-col items-center box-border">
+            <div class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]">
+                <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]">My Upcoming
+                    Bookings
+                </p>
+                <ul class="bookingscontainer">
+
+                </ul>
+            </div>
+            <div class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]">
+                <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]">My Previous
+                    Bookings
+                </p>
+                <ul class="bookingscontainer">
+
+                </ul>
+            </div>
         </section>
 
         <!-- Modal for Edit Profile -->
@@ -163,24 +178,39 @@
                     <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[15px]">N.B: You cannot change
                         Email Address, Gender and Date of Birth</p>
                 </form>
-                <div class="modal-action w-full flex">
-                    
-                     <div class="w-[50%]">
+                <div class="modal-action w-full flex max-w-[500px] justify-between m-0 mt-[24px]">
+
+                    <div class="w-full max-w-[200px]">
                         <!-- Update in Database should be triggered from Here -->
-                         <button
-                            class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">Update</button>
-                     </div>
-                       
-                    <form method="dialog" class="w-[50%]">
-                        
                         <button
-                            class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">Close</button>
+                            class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">Update</button>
+                    </div>
+
+                    <form method="dialog" class="w-full max-w-[200px]">
+
+                        <button
+                            class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+        <!-- Modal for Logout -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <p class="py-4">Are you sure you want to logout?</p>
+                <div class="modal-action">
+                    <div>
+                        <button class="btn">Yes</button>
+                    </div>
+                    <form method="dialog">
+                        <button class="btn">No</button>
                     </form>
                 </div>
             </div>
         </dialog>
     </main>
-
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>
