@@ -71,20 +71,21 @@
         <!-- My Profile Section -->
         <section
             class="w-full max-w-[1200px] h-auto bg-white rounded-[10px] shadow-md flex flex-col items-center py-[50px] box-border">
-            <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]">Welcome <span
-                    class="fullname">User</span>
+            <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]">Welcome, <span
+                    class="fullname" id="user">User</span>
             </p>
             <div class="w-full flex flex-col items-center gap-[22px] p-[30px] lg:flex-row lg:items-start">
                 <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center">
                     <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Full Name</label>
-                        <p
+                        <p 
+                            id="fname"
                             class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             First Name</p>
                     </div>
                     <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Email Address</label>
-                        <p
+                        <p id="email"
                             class="emailAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             Email Address</p>
                     </div>
@@ -201,7 +202,7 @@
                 <p class="py-4">Are you sure you want to logout?</p>
                 <div class="modal-action">
                     <div>
-                        <button class="btn">Yes</button>
+                        <button class="btn" id="logout">Yes</button>
                     </div>
                     <form method="dialog">
                         <button class="btn">No</button>

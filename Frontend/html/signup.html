@@ -8,9 +8,6 @@
         <!-- Tailwind CDN -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        <!-- JS -->
-        <script type="module" src="/js/supabaseConfig.js" defer></script>
-        <script type="module" src="/js/signup.js" defer></script>
         <!-- Font Awesome -->
 
         <link
@@ -32,11 +29,14 @@
 
         <!-- css -->
 
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- JS -->
+        <script type="module" defer src="../js/singup.js"></script>
     </head>
 
     <body
-        class="montserrat bg-[url(/assets/login-and-signup/sign-up.jpg)] bg-cover bg-center bg-no-repeat bg-fixed flex justify-start h-[100vh]"
+        class="montserrat bg-[url(../assets/login-and-signup/sign-up.jpg)] bg-cover bg-center bg-no-repeat bg-fixed flex justify-start h-[100vh]"
     >
         <main
             class="w-full lg:max-w-[50%] h-[100vh] bg-[#14274A]/60 lg:bg-[#14274A] flex flex-col justify-between items-center"
@@ -54,20 +54,41 @@
                     action=""
                     class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]"
                 >
-                    <label
-                        for="name"
-                        class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]"
-                        >Name</label
-                    >
+                    <div class="flex items-center gap-4">
+                        <div>
+                            <label
+                                for="firstName"
+                                class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]"
+                                >First Name</label
+                            >
 
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Your full name..."
-                        required
-                        class="bg-white w-full max-w-[497px] h-[7vh] border border-yellow-400 rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                    />
+                            <input
+                                type="text"
+                                name="firstName"
+                                id="firstName"
+                                placeholder="Your first name..."
+                                required
+                                class="bg-white w-full max-w-[497px] h-[7vh] border border-yellow-400 rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                            />
+                        </div>
+
+                        <div>
+                            <label
+                                for="lastName"
+                                class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]"
+                                >Last Name</label
+                            >
+
+                            <input
+                                type="text"
+                                name="lastName"
+                                id="lastName"
+                                placeholder="Your last name..."
+                                required
+                                class="bg-white w-full max-w-[497px] h-[7vh] border border-yellow-400 rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                            />
+                        </div>
+                    </div>
 
                     <label
                         for="email"
