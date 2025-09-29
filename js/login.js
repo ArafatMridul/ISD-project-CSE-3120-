@@ -1,60 +1,57 @@
-import { supabase } from "./supabaseConfig.js";
+const form = document.querySelector("#loginForm");
+const btn = document.querySelector("#submitForChangePassword");
 
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.getElementById("loginForm");
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    loginForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+    const formData = new FormData(form);
+    const email = formData.get("email");
+    const password = formData.get("password");
 
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value;
+    const inputs = { email, password };
 
-        if (!email || !password) {
-            alert("Please enter both email and password");
-            return;
-        }
-
-        try {
-            const { data, error } = await supabase
-                .from("users")
-                .select("*")
-                .eq("email", email)
-                .eq("password", password)
-                .single();
-
-            if (error || !data) {
-                alert("Invalid email or password");
-                return;
-            }
-
-            // Save session
-            window.localStorage.setItem("currentUser", JSON.stringify(data));
-
-            alert("Login successful!");
-            window.location.href = "index.html";
-        } catch (err) {
-            console.error(err);
-            alert("An error occurred: " + err.message);
-        }
-    });
-
-    // Forgot Password Functionality
-
-    const forgotBtn = document.querySelector(".forgotBtn");
-
-    if (forgotBtn) {
-        forgotBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const userEmail = document.getElementById("userEmail").value.trim();
-            if (!userEmail) {
-                alert("Please enter your email!")
-                return;
-            }
-            alert("Password reset link has been sent to your email!");
-            document.getElementById("my_modal_3").close();
+    try {
+        const response = await fetch("http://localhost:5120/user/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(inputs),
         });
-    }
 
+        if (!response.ok) {
+            alert("invalid password");
+        } else {
+            const data = await response.json();
+
+            if (!data) {
+                alert("Something went wrong");
+            } else {
+                localStorage.setItem("token", data.token);
+                window.location.href = "./userDashboard.html";
+            }
+        }
+    } catch (error) {
+        console.log("something went wrong while logging in");
+    }
 });
 
+btn.addEventListener("click", async () => {
+    const email = document.querySelector("#userEmail").value;
+    try {
+        const response = await fetch(`http://localhost:5120/user/${email}`, {
+            method: "GET",
+        });
+        console.log(response.ok);
+        if (response.ok) {
+            alert("Email found. Proceeding to password change");
 
+            localStorage.setItem("email", email);
+            setTimeout(() => {
+                localStorage.removeItem("email");
+            }, 2 * 60 * 1000);
+
+            window.location.href = "./changepassword.html";
+        } else {
+            alert("This email does not exist");
+        }
+    } catch (error) {}
+});
