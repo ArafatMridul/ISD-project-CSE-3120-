@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Hotel | Rooms</title>
+    <title>Luxury Hotel | Facilities</title>
 
-    <!-- Tailwind and DaisyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Font Awesome -->
@@ -24,17 +23,36 @@
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
 
+<<<<<<< HEAD:html/facilities.html
     <!-- css -->
 
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body class="montserrat">
-    <header class="bg-[url(/assets/banner3.jpg)] relative bg-cover w-full h-[100%] mb-[83px]">
+    <header class="bg-[url(/assets/banner2.jpg)] bg-cover w-full h-[100%] mb-[83px]">
         <!-- Navbar -->
-        <div class="absolute bg-black/40 inset-0 z-10"></div>
-        <section
-            class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px] relative z-50">
+=======
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+
+    <body class="montserrat">
+        <header
+            class="bg-[url(../assets/banner2.jpg)] bg-cover w-full h-[100%] mb-[83px]"
+        >
+            <!-- Navbar -->
+
+            <section
+                class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px]"
+            >
+                <img
+                    src="../assets/brand-logo.png"
+                    class="w-[128px] h-[74.24px] cursor-pointer"
+                    alt=""
+                />
+>>>>>>> feature-auth-v2:Frontend/html/facilities.html
+
+        <section class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px]">
             <img src="/assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer" alt="" />
 
             <ul class="flex flex-col gap-[20px] lg:flex-row lg:gap-[50px] font-bold text-white text-center">
@@ -60,7 +78,7 @@
         </section>
 
         <!-- Hero Section -->
-        <section class="relative z-50">
+        <section>
             <div
                 class="text-white flex flex-col items-center text-center lg:ml-[212px] lg:items-start lg:text-start mb-[50px]">
                 <p class="text-[30px]">WELCOME TO</p>
@@ -76,7 +94,7 @@
 
             <button
                 class="bookNow w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in">
-                <img src="/assets/booking.png" alt="" /><span class="text-white font-extrabold">BOOK NOW</span>
+                <img src="/assets/booking.png" alt="" /><span class="text-white">BOOK NOW</span>
             </button>
 
             <div class="flex flex-col items-center mx-auto w-[79px] pb-[38px]">
@@ -87,19 +105,36 @@
     </header>
     <main class="pb-30">
         <p class="text-[30px] font-bold text-center text-[#14274A] mb-[34px]">
-            ROOMS AND RATES
+            FACILITIES
         </p>
         <p
-            class="w-full max-w-[1200px] text-[15px] box-border px-[20px] lg:text-[20px] mx-auto text-center text-[#14274A] mb-[82px]">
-            Each of our bright, light-flooded rooms come with everything you
-            could possibly need for a comfortable stay. And yes, comfort
-            isn’t our only objective, we also value good design, sleek
-            contemporary furnishing complemented by the rich tones of
-            nature’s palette as visible from our rooms’ sea-view windows and
-            terraces.
+            class="w-full max-w-[1540px] text-[15px] px-[20px] lg:text-[20px] mx-auto text-center text-[#14274A] mb-[82px]">
+            We want your stay at our lush hotel to be truly unforgettable.
+            That is why we give special attention to all of your needs so
+            that we can ensure an experience quite uniquw. Luxury hotels
+            offers the perfect setting with stunning views for leisure and
+            our modern luxury resort facilities will help you enjoy the best
+            of all.
         </p>
-        <div class="roomCardContainer w-full max-w-[1200px] grid grid-cols-1 gap-[46px] mx-auto">
-
+        <div class="px-6 md:px-16 xl:px-0 grid gap-46 lg:max-w-[1400px] mx-auto box-border">
+            <div>
+                <img src="/assets/facilities/gym.png" alt="" />
+            </div>
+            <div>
+                <img src="/assets/facilities/bar.png" alt="" />
+            </div>
+            <div>
+                <img src="/assets/facilities/spa.png" alt="" />
+            </div>
+            <div>
+                <img src="/assets/facilities/pool.png" alt="" />
+            </div>
+            <div>
+                <img src="/assets/facilities/restaurant.png" alt="" />
+            </div>
+            <div>
+                <img src="/assets/facilities/laundry.png" alt="" />
+            </div>
         </div>
 
         <div class="w-fit mx-auto text-center mt-50">
@@ -107,15 +142,13 @@
                 Testimonials
             </h2>
             <p class="text-sm lg:text-[30px] text-[#14274A] font-medium">
-                "Calm, Serene, Retro – What a way to relax and enjoy"
+                "Calm, Serene, Retro - What a way to relax and enjoy"
             </p>
             <p class="text-sm lg:text-[25px] text-[#14274A]">
                 Mr. and Mrs. Baxter, UK
             </p>
         </div>
     </main>
-
-    <!-- Footer Section -->
 
     <footer
         class="bg-[#14274A] flex flex-col gap-[50px] h-auto min-h-[320px] items-center lg:flex-row lg:justify-around py-[20px]">
@@ -163,6 +196,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD:html/facilities.html
         <div class="flex flex-col items-center text-white font-bold gap-[30px] lg:items-start">
             <p>Subscribe to our newsletter</p>
             <form class="flex" action="">
@@ -171,27 +205,94 @@
                     placeholder="Email Address" /><button
                     class="w-[80px] h-[52px] text-black text-[16px] bg-[#E0B973] rounded-r-[5px]">
                     OK
+=======
+            <!-- Hero Section -->
+            <section>
+                <div
+                    class="text-white flex flex-col items-center text-center lg:ml-[212px] lg:items-start lg:text-start mb-[50px]"
+                >
+                    <p class="text-[30px]">WELCOME TO</p>
+                    <p class="text-[70px] font-bold h-[80px] eb-garamond">
+                        LUXURY
+                    </p>
+                    <p class="font-bold text-[40px]">HOTEL</p>
+                    <p class="w-full max-w-[572px] lg:text-[25px]">
+                        Book your stay and enjoy Luxury<br />
+                        redefined at the most affordable rates.
+                    </p>
+                </div>
+
+                <button
+                    class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in"
+                >
+                    <img src="../assets/booking.png" alt="" /><span
+                        class="text-white"
+                        >BOOK NOW</span
+                    >
+>>>>>>> feature-auth-v2:Frontend/html/facilities.html
                 </button>
             </form>
         </div>
     </footer>
+    <script>
+        // Booking Functionality
 
-    <!-- Modal -->
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle w-full">
-        <div class="modal-box flex flex-col items-center p-[10px] box-border gap-[10px]">
-            <img src="" alt="" class="roomImg w-full rounded-[10px]">
-            <p class="roomName text-center text-3xl font-extrabold text-[#14274A]"></p>
-            <p class="roomDescription text-center w-full text-[15px] text-black"></p>
-            <div class="modal-action flex justify-between items-center w-full">
-                <p class="roomPrice bg-[#E0B973] hover:bg-[#131312] text-white duration-500 ease-in cursor-pointer px-8 py-2 rounded-md"></p>
-                <form method="dialog">
-                    <button class="btn">Close</button>
-                </form>
+<<<<<<< HEAD:html/facilities.html
+        const bookNow = document.querySelector(".bookNow");
+=======
+                <div
+                    class="flex flex-col items-center mx-auto w-[79px] pb-[38px]"
+                >
+                    <p class="text-[20px] text-white font-bold">Scroll</p>
+                    <i
+                        class="fa-solid fa-circle-down text-white text-[30px] cursor-pointer"
+                    ></i>
+                </div>
+            </section>
+        </header>
+        <main class="pb-30">
+            <p
+                class="text-[30px] font-bold text-center text-[#14274A] mb-[34px]"
+            >
+                FACILITIES
+            </p>
+            <p
+                class="w-full max-w-[1540px] text-[15px] px-[20px] lg:text-[20px] mx-auto text-center text-[#14274A] mb-[82px]"
+            >
+                We want your stay at our lush hotel to be truly unforgettable.
+                That is why we give special attention to all of your needs so
+                that we can ensure an experience quite uniquw. Luxury hotels
+                offers the perfect setting with stunning views for leisure and
+                our modern luxury resort facilities will help you enjoy the best
+                of all.
+            </p>
+            <div class="px-6 md:px-16 xl:px-0 grid gap-46 lg:max-w-[1400px] mx-auto box-border">
+                <div>
+                    <img src="../assets/facilities/gym.png" alt="" />
+                </div>
+                <div>
+                    <img src="../assets/facilities/bar.png" alt="" />
+                </div>
+                <div>
+                    <img src="../assets/facilities/spa.png" alt="" />
+                </div>
+                <div>
+                    <img src="../assets/facilities/pool.png" alt="" />
+                </div>
+                <div>
+                    <img src="../assets/facilities/restaurant.png" alt="" />
+                </div>
+                <div>
+                    <img src="../assets/facilities/laundry.png" alt="" />
+                </div>
             </div>
-        </div>
-    </dialog>
+>>>>>>> feature-auth-v2:Frontend/html/facilities.html
 
-    <script src="../js/rooms.js"></script>
+        bookNow.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "bookingPage.html";
+        });
+    </script>
 </body>
 
 </html>
