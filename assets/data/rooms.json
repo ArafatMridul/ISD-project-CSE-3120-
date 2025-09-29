@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "SINGLE ROOM",
+    "image": "../assets/rooms/single.png",
+    "price": "5000 BDT",
+    "details_text": "VIEW ROOM DETAILS",
+    "description": "A cozy single room perfect for solo travelers, with one comfortable bed and modern amenities."
+  },
+  {
+    "id": "2",
+    "title": "DOUBLE ROOM",
+    "image": "../assets/banner3.jpg",
+    "price": "10000 BDT",
+    "details_text": "VIEW ROOM DETAILS",
+    "description": "Spacious double room ideal for couples, featuring one master bed and a stylish interior."
+  },
+  {
+    "id": "3",
+    "title": "TWIN ROOM",
+    "image": "../assets/rooms/twin.png",
+    "price": "6500 BDT",
+    "details_text": "VIEW ROOM DETAILS",
+    "description": "Twin room with two separate beds, offering a comfortable stay for two guests with all essentials."
+  }
+]
