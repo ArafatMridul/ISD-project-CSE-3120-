@@ -69,7 +69,7 @@
             </div>
 
             <button
-                class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in">
+                class="bookNow w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto mb-[50px] cursor-pointer hover:bg-[#131312] duration-500 ease-in">
                 <img src="/assets/booking.png" alt="" /><span class="text-white">BOOK NOW</span>
             </button>
 
@@ -205,6 +205,16 @@
             </form>
         </div>
     </footer>
+    <script>
+        // Booking Functionality
+
+        const bookNow = document.querySelector(".bookNow");
+
+        bookNow.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "bookingPage.html";
+        });
+    </script>
 </body>
 
 </html>
