@@ -25,18 +25,21 @@ const sidebarSelection = () => {
     btns.forEach((btn) => {
         btn.addEventListener("click", () => {
             if (btn.innerText === "No") {
-                if (lastActive == "My Profile") {
+                if (lastActive === "My Profile") {
                     myProfile();
                     const it = document.querySelector(".myProfile");
                     it.classList.add("text-[#e0b973]", "bg-[#131312]");
                     it.classList.remove("text-white");
-                } else {
+                } else if(lastActive==="My Bookings") {
                     myBookings();
                     const it = document.querySelector(".myBookings");
                     it.classList.add("text-[#e0b973]", "bg-[#131312]");
                     it.classList.remove("text-white");
                 }
+                const bookNow=document.querySelector(".bookNow");
                 const logout = document.querySelector(".logout");
+                bookNow.classList.remove("text-[#e0b973]", "bg-[#131312]");
+                bookNow.classList.add("text-white");
                 logout.classList.remove("text-[#e0b973]", "bg-[#131312]");
                 logout.classList.add("text-white");
             } else if (btn.innerText === "Yes") {
@@ -63,7 +66,11 @@ const sidebarSelection = () => {
             } else if (span.innerText === "My Bookings") {
                 myBookings();
                 lastActive = "My Bookings";
-            } else logoutModal.showModal();
+            } 
+            else if(span.innerText==="Book Now")
+                window.location.href="bookingPage.html";
+            else 
+                logoutModal.showModal();
         });
     });
 };
@@ -75,6 +82,9 @@ sidebarSelection();
 document.querySelector(".sidebarClose").addEventListener("click", () => {
     document.querySelector("#my-drawer-2").checked = false;
 });
+
+
+// Backend work
 
 const user = document.querySelector("#user");
 const fullName = document.querySelector("#fname");

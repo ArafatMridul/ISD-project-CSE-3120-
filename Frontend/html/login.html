@@ -1,156 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Luxury Hotel | Login</title>
 
-        <!-- Tailwind and Daisy UI CDN -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/daisyui@5"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Hotel | Login</title>
 
-        <!-- Font Awesome -->
+    <!-- Tailwind and Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+    <!-- Font Awesome -->
 
-        <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-        />
+    <!-- Google Fonts -->
 
-        <!-- css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
 
-        <link rel="stylesheet" href="../css/style.css" />
+    <!-- css -->
 
-        <!-- JS -->
-        <script type="module" defer src="../js/login.js"></script>
-    </head>
+    <link rel="stylesheet" href="../css/style.css" />
 
-    <body
-        class="montserrat bg-[url(../assets/login-and-signup/login-page.jpg)] bg-cover bg-center bg-no-repeat bg-fixed flex justify-end h-[100vh]"
-    >
-        <main
-            class="w-full lg:max-w-[50%] h-[100vh] bg-[#14274A]/60 flex flex-col justify-between items-center"
-        >
-            <div
-                class="w-full h-full flex flex-col items-center justify-center gap-[30px]"
-            >
-                <p
-                    class="text-white text-[5vh] font-bold eb-garamond mt-[30px] text-center"
-                >
-                    WELCOME BACK!
-                </p>
-                <form
-                    id="loginForm"
-                    action=""
-                    class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]"
-                >
-                    <label
-                        for="email"
-                        class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]"
-                        >Email</label
-                    >
+    <!-- JS -->
+    <script type="module" defer src="../js/login.js"></script>
+</head>
 
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="example@email.com"
-                        required
-                        class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]"
-                    />
-
-                    <label
-                        for="password"
-                        class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]"
-                        >Password</label
-                    >
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Password"
-                        required
-                        class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]"
-                    />
-
-                    <div class="flex justify-between">
-                        <p
-                            class="eb-garamond text-[2vh] text-white font-semibold"
-                        >
-                            <a
-                                href="./signup.html"
-                                class="cursor-pointer no-underline hover:text-[#E0B973] duration-500 ease-in"
-                                >Don't have an account?</a
-                            >
-                        </p>
-                        <p
-                            class="self-end eb-garamond text-[2vh] text-white font-semibold cursor-pointer hover:text-[#E0B973] duration-500 ease-in"
-                            onclick="my_modal_3.showModal()"
-                        >
-                            Forgot Password?
-                        </p>
-                    </div>
-
-                    <input
-                        type="submit"
-                        value="Login"
-                        class="w-[100px] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center"
-                    />
-                </form>
-            </div>
-            <p
-                class="text-white eb-garamond text-[10px] pb-[10px] lg:text-[16px]"
-            >
-                © 2025 Luxury Hotel. All rights reserved.
+<body
+    class="montserrat bg-[url(../assets/login-and-signup/login-page.jpg)] bg-cover bg-center bg-no-repeat bg-fixed flex justify-end h-[100vh]">
+    <main class="w-full lg:max-w-[50%] min-h-[100vh] bg-[#14274A]/60 flex flex-col justify-between items-center">
+        <div class="w-full h-full flex flex-col items-center justify-center gap-[30px]">
+            <p class="text-white text-[5vh] font-bold eb-garamond mt-[30px] text-center">
+                WELCOME BACK!
             </p>
-        </main>
-        <dialog id="my_modal_3" class="modal">
-            <div class="modal-box bg-[#14274A]">
-                <button
-                    type="button"
-                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-red-600"
-                >
-                    ✕
-                </button>
-                <div class="flex flex-col gap-[10px]">
-                    <label
-                        for="userEmail"
-                        class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]"
-                        >Enter your Email</label
-                    >
-                    <input
-                        type="email"
-                        name="userEmail"
-                        id="userEmail"
-                        placeholder="example@email.com"
-                        required
-                        class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]"
-                    />
-                    <button
-                        type="button"
-                        id="submitForChangePassword"
-                        class="forgotBtn w-[100px] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center"
-                    >
-                        Submit
-                    </button>
+            <form id="loginForm" action="" class="flex flex-col gap-[20px] w-full max-w-[500px] box-border px-[20px]">
+                <label for="email" class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]">Email</label>
+
+                <input type="email" name="email" id="email" placeholder="example@email.com" required
+                    class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]" />
+
+                <label for="password"
+                    class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required
+                    class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]" />
+
+                <div class="flex justify-between">
+                    <p class="eb-garamond text-[2vh] text-white font-semibold">
+                        <a href="./signup.html"
+                            class="cursor-pointer no-underline hover:text-[#E0B973] duration-500 ease-in">Don't have an
+                            account?</a>
+                    </p>
+                    <p class="self-end eb-garamond text-[2vh] text-white font-semibold cursor-pointer hover:text-[#E0B973] duration-500 ease-in"
+                        onclick="my_modal_3.showModal()">
+                        Forgot Password?
+                    </p>
                 </div>
+                <div role="alert" class="hidden alert alert-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span></span>
+                </div>
+                <div class="flex flex-col items-center gap-4 lg:flex-row justify-between">
+                    <input type="submit" value="Login"
+                        class="w-[200px] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center" />
+                    <button
+                        class="w-[200px] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center"
+                        onclick="window.location.href='index.html'">Back to Home</button>
+                </div>
+
+            </form>
+        </div>
+        <p class="text-white eb-garamond text-[10px] pb-[10px] lg:text-[16px]">
+            © 2025 Luxury Hotel. All rights reserved.
+        </p>
+    </main>
+    <dialog id="my_modal_3" class="modal">
+        <div class="modal-box bg-[#14274A]">
+            <button type="button" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-red-600">
+                ✕
+            </button>
+            <div class="flex flex-col gap-[10px]">
+                <label for="userEmail" class="font-bold text-[3vh] eb-garamond text-white lg:text-[20px]">Enter your
+                    Email</label>
+                <input type="email" name="userEmail" id="userEmail" placeholder="example@email.com" required
+                    class="bg-white w-full max-w-[497px] h-[7vh] rounded-[5px] box-border px-[10px] text-black font-bold eb-garamond text-[3vh] focus:bg-[#E0B973] focus:outline-none duration-500 ease-in focus:text-[#333333] lg:px-[32px] lg:py-[10px] lg:rounded-[10px]" />
+                <button type="button" id="submitForChangePassword"
+                    class="forgotBtn w-[100px] h-[7vh] bg-[#E0B973] rounded-[10px] text-[2vh] text-white font-bold cursor-pointer hover:bg-[#131312] duration-500 ease-in self-center">
+                    Submit
+                </button>
             </div>
-        </dialog>
-        <script src="../js/login.js"></script>
-    </body>
+        </div>
+    </dialog>
+    <script src="../js/login.js"></script>
+</body>
+
 </html>

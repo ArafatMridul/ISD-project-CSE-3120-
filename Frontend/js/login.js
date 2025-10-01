@@ -18,7 +18,14 @@ form.addEventListener("submit", async (e) => {
         });
 
         if (!response.ok) {
-            alert("invalid password");
+            // alert("invalid password");
+            const alert = document.querySelector(".alert");
+            alert.querySelector("span").innerText="Invalid password!";
+            alert.classList.remove("hidden");
+            setTimeout(() => {
+                alert.classList.add("hidden");
+            }, 5000);
+            return;
         } else {
             const data = await response.json();
 
@@ -53,5 +60,5 @@ btn.addEventListener("click", async () => {
         } else {
             alert("This email does not exist");
         }
-    } catch (error) {}
+    } catch (error) { }
 });
