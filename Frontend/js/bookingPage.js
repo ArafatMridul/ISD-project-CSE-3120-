@@ -12,7 +12,7 @@ const loadRooms = (data) => {
 
     for (const room of data) {
         const option = document.createElement("option");
-        option.innerText = room.title;
+        option.innerText = `${room.title} || ${room.price}`;
         option.value = room.id;
         roomContainer.appendChild(option);
     }
