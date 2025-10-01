@@ -30,7 +30,13 @@ form.addEventListener("submit", async (e) => {
             const data = await response.json();
 
             if (!data.token) {
-                alert("Email address does not exist.");
+                const alert = document.querySelector(".alert");
+                alert.querySelector("span").innerText="Email address does not exist.";
+                alert.classList.remove("hidden");
+                setTimeout(() => {
+                    alert.classList.add("hidden");
+                }, 5000);
+                return;
             } else {
                 localStorage.setItem("token", data.token);
                 window.location.href = "./userDashboard.html";
