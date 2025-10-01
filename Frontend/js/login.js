@@ -22,7 +22,7 @@ form.addEventListener("submit", async (e) => {
         } else {
             const data = await response.json();
 
-            if (!data) {
+            if (!data.token) {
                 alert("Something went wrong");
             } else {
                 localStorage.setItem("token", data.token);
