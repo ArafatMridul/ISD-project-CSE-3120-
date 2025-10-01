@@ -23,7 +23,7 @@ form.addEventListener("submit", async (e) => {
             const data = await response.json();
 
             if (!data.token) {
-                alert("Something went wrong");
+                alert("Email address does not exist.");
             } else {
                 localStorage.setItem("token", data.token);
                 window.location.href = "./userDashboard.html";
