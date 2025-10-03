@@ -24,7 +24,8 @@ const loadRooms = (data) => {
 
 const booking = (data) => {
     const bookBtn = document.querySelector(".bookBtn");
-    const form = document.querySelector(".bookForm");
+    const form = document.querySelector("#bookForm");
+    const modal = document.querySelector("#my_modal_5");
 
     bookBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -41,7 +42,8 @@ const booking = (data) => {
             },5000);
             return;
         }
-        const modal = document.querySelector("#my_modal_5");
         modal.showModal();
     });
+
+
 }
