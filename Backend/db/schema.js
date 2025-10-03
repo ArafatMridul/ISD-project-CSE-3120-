@@ -1,5 +1,14 @@
-import { pgTable, uuid, text, varchar, timestamp } from "drizzle-orm/pg-core";
+import {
+    pgTable,
+    uuid,
+    text,
+    varchar,
+    timestamp,
+    pgEnum,
+    date,
+} from "drizzle-orm/pg-core";
 
+// Users Table
 export const usersTable = pgTable("users", {
     id: uuid().primaryKey().defaultRandom(),
 
@@ -13,4 +22,26 @@ export const usersTable = pgTable("users", {
 
     createdAt: timestamp().defaultNow().notNull(),
     updatedAt: timestamp().$onUpdate(() => new Date()),
+});
+
+// Booking Status Enum
+export const bookingStatusEnum = pgEnum("booking_status", [
+    "pending",
+    "confirmed",
+]);
+
+// Bookings Table
+export const bookingsTable = pgTable("bookings", {
+    id: uuid().primaryKey().defaultRandom(),
+    name: varchar({ length: 30 }).notNull(),
+
+    checkIn: date().notNull(),
+    checkOut: date().notNull(),
+
+    roomType: varchar({ length: 20 }).notNull(),
+    status: bookingStatusEnum().notNull().default("pending"),
+
+    userId: uuid()
+        .references(() => usersTable.id)
+        .notNull(),
 });

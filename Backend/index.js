@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import userRouter from "./routes/user.routes.js";
+import bookingsRouter from "./routes/bookings.route.js";
 import cors from "cors";
 
 const app = express();
@@ -16,5 +17,6 @@ app.use(
 );
 
 app.use("/user", userRouter);
+app.use("/bookings", bookingsRouter);
 
 app.listen(PORT, () => console.log(`Listening on PORT : ${PORT}`));
