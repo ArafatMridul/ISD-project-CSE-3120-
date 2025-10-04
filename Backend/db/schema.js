@@ -6,6 +6,7 @@ import {
     timestamp,
     pgEnum,
     date,
+    integer,
 } from "drizzle-orm/pg-core";
 
 // Users Table
@@ -40,6 +41,8 @@ export const bookingsTable = pgTable("bookings", {
 
     roomType: varchar({ length: 20 }).notNull(),
     status: bookingStatusEnum().notNull().default("pending"),
+
+    price: integer().notNull(),
 
     userId: uuid()
         .references(() => usersTable.id)
