@@ -11,21 +11,23 @@ export const getAllBookingsByUserId = async (userId) => {
     return result;
 };
 
-export const insertNewBooking = async (
-    userId,
+export const insertNewBooking = async ({
     name,
     checkIn,
     checkOut,
-    roomType
-) => {
+    roomType,
+    userId,
+    price,
+}) => {
     const [result] = await db
         .insert(bookingsTable)
         .values({
-            userId,
             name,
             checkIn,
             checkOut,
             roomType,
+            userId,
+            price,
         })
         .returning({ id: bookingsTable.id });
 
