@@ -60,6 +60,7 @@ const booking = (data) => {
 
     yesBtn.addEventListener("click", async () => {
         await insetNewBookingIntoDB(inputs);
+        window.location.href="userDashboard.html";
         modal.close();
     });
 };

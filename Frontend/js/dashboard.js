@@ -115,7 +115,7 @@ window.onload = async () => {
         user.innerText = `${data.firstName} ${data.lastName}`;
         fullName.innerText = `${data.firstName} ${data.lastName}`;
         email.innerText = `${data.email}`;
-        console.log(data);
+        // console.log(data);
 
         // document.getElementById('userName').textContent = data.firstName;
     } catch (error) {
