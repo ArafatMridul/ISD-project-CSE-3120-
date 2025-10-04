@@ -28,50 +28,49 @@
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-<body class="monteserrat flex flex-col bg-[#F8F9FA] lg:items-center lg:flex-row">
-    <header>
-        <div class="drawer lg:drawer-open">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="m-4">
-                <!-- Page content here -->
-                <label for="my-drawer-2"
-                    class="cursor-pointer drawer-button bg-[#14274A] text-white p-2 rounded-md lg:invisible">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-            </div>
-            <div class="drawer-side">
-                <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-                <ul class="menu bg-base-200 text-base-content min-h-full w-80 px-4 py-0 bg-[#14274A]">
-                    <!-- Sidebar content here -->
-                    <div class="flex justify-between lg:justify-center">
-                        <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer mb-4"
-                            onclick="window.location.href='index.html';" alt="" />
-                        <i
-                            class="sidebarClose fa-solid fa-circle-xmark text-[20px] text-white hover:text-[#e0b973] cursor-pointer mt-[30px] lg:invisible"></i>
-                    </div>
-
-                    <li
-                        class="myProfile eb-garamond font-semibold text-[20px] text-[#e0b973] bg-[#131312] hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                        <span>My Profile</span>
-                    </li>
-                    <li
-                        class="myBookings eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                        <span>My Bookings</span>
-
-                    </li>
-                    <li
-                        class="bookNow eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                        <span>Book Now</span>
-                    </li>
-                    <li
-                        class="logout eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                        <span>Logout</span>
-                    </li>
-                </ul>
-            </div>
+<body class="monteserrat flex flex-col bg-[#F8F9FA] lg:flex-row">
+    <div class="drawer lg:drawer-open lg:w-auto">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="m-4">
+            <!-- Page content here -->
+            <label for="my-drawer-2"
+                class="cursor-pointer drawer-button bg-[#14274A] text-white p-2 rounded-md lg:invisible">
+                <i class="fa-solid fa-bars"></i>
+            </label>
         </div>
-    </header>
-    <main class="w-full h-auto lg:max-w-[90%] flex flex-col justify-center items-center">
+        <div class="drawer-side">
+            <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-200 text-base-content w-80 px-4 py-0 bg-[#14274A] min-h-full">
+                <!-- Sidebar content here -->
+                <div class="flex justify-between lg:justify-center">
+                    <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer mb-4"
+                        onclick="window.location.href='index.html';" alt="" />
+                    <i
+                        class="sidebarClose fa-solid fa-circle-xmark text-[20px] text-white hover:text-[#e0b973] cursor-pointer mt-[30px] lg:invisible"></i>
+                </div>
+
+                <li
+                    class="myProfile eb-garamond font-semibold text-[20px] text-[#e0b973] bg-[#131312] hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
+                    <span>My Profile</span>
+                </li>
+                <li
+                    class="myBookings eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
+                    <span>My Bookings</span>
+
+                </li>
+                <li
+                    class="bookNow eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
+                    <span>Book Now</span>
+                </li>
+                <li
+                    class="logout eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
+                    <span>Logout</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="w-full h-auto lg:max-w-[70%] flex flex-col justify-center items-center mx-auto">
         <!-- My Profile Section -->
         <section
             class="w-full max-w-[1200px] h-auto bg-white rounded-[10px] shadow-md flex flex-col items-center py-[50px] box-border">
@@ -82,8 +81,7 @@
                 <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center">
                     <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
                         <label class="text-[15px] font-semibold">Full Name</label>
-                        <p 
-                            id="fname"
+                        <p id="fname"
                             class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
                             First Name</p>
                     </div>
@@ -138,12 +136,13 @@
 
         <!-- My Bookings Section -->
 
-        <section class="w-full max-w-[1200px] h-[100vh] bg-[#F8F9FA] hidden flex-col items-center box-border">
+        <section class="w-full max-w-[1200px] min-h-[100vh] bg-[#F8F9FA] hidden flex-col items-center box-border">
             <div class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]">
                 <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]">My Upcoming
                     Bookings
                 </p>
-                <ul class="upcomingBookingscontainer">
+                <ul
+                    class="upcomingBookingscontainer eb-garamond w-full flex flex-col items-center gap-[10px] px-[10px] box-border">
 
                 </ul>
             </div>
@@ -151,7 +150,8 @@
                 <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]">My Previous
                     Bookings
                 </p>
-                <ul class="previousBookingscontainer">
+                <ul
+                    class="previousBookingscontainer eb-garamond w-full flex flex-col items-center gap-[10px] px-[10px] box-border">
 
                 </ul>
             </div>
@@ -214,8 +214,11 @@
                 </div>
             </div>
         </dialog>
+
+
     </main>
     <script src="../js/dashboard.js"></script>
+    <script src="../js/getAllBookings.js"></script>
 </body>
 
 </html>
