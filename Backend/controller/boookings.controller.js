@@ -91,15 +91,16 @@ export const createNewBooking = async (req, res) => {
 
     const { id: userId } = payload;
 
-    const { name, checkIn, checkOut, roomType } = req.body;
+    const { name, checkIn, checkOut, roomType, price } = req.body;
 
-    const result = await insertNewBooking(
-        userId,
+    const result = await insertNewBooking({
         name,
         checkIn,
         checkOut,
-        roomType
-    );
+        roomType,
+        userId,
+        price,
+    });
 
     if (!result) {
         return res.status(400).json({ erro: "Failed to insert new booking" });

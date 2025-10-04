@@ -1,9 +1,10 @@
 // Fetching from rooms.json file
-
-fetch("../assets/data/rooms.json").then(res => res.json()).then(data => {
-    loadRooms(data);
-    booking(data);
-});
+fetch("../assets/data/rooms.json")
+    .then((res) => res.json())
+    .then((data) => {
+        loadRooms(data);
+        booking(data);
+    });
 
 // Function to create room cards
 
@@ -19,12 +20,14 @@ const loadRooms = (data) => {
     // console.log(roomContainer);
 };
 
+let inputs = { name: "", checkIn: "", checkOut: "", roomType: "", price: null };
 
 // Booking confirmation
 
 const booking = (data) => {
     const bookBtn = document.querySelector(".bookBtn");
     const form = document.querySelector("#bookForm");
+    const yesBtn = document.querySelector("#yes-btn");
     const modal = document.querySelector("#my_modal_5");
 
     bookBtn.addEventListener("click", (e) => {
@@ -32,18 +35,49 @@ const booking = (data) => {
         const name = document.getElementById("name").value.trim();
         const checkIn = document.getElementById("checkIn").value;
         const checkOut = document.getElementById("checkOut").value;
-        const roomType = document.querySelector("select[name='roomType']").value;
-        const alert=document.querySelector(".alert");
+        const roomSelect = document.querySelector("select[name='roomType']");
+        const roomTypeFullText =
+            roomSelect.options[roomSelect.selectedIndex].text;
+
+        const [roomType, priceStr] = roomTypeFullText
+            .split("||")
+            .map((s) => s.trim());
+        const price = parseInt(priceStr);
+
+        inputs = { ...inputs, name, checkIn, checkOut, roomType, price };
+
+        const alert = document.querySelector(".alert");
 
         if (!name || !checkIn || !checkOut || !roomType) {
             alert.classList.remove("hidden");
-            setTimeout(()=>{
+            setTimeout(() => {
                 alert.classList.add("hidden");
-            },5000);
+            }, 5000);
             return;
         }
         modal.showModal();
     });
 
+    yesBtn.addEventListener("click", async () => {
+        await insetNewBookingIntoDB(inputs);
+        modal.close();
+    });
+};
 
-}
+// Add New bookings into database
+const insetNewBookingIntoDB = async (inputs) => {
+    const token = localStorage.getItem("token");
+    try {
+        const response = await fetch("http://localhost:5120/bookings/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(inputs),
+        });
+        const data = await response.json();
+    } catch (error) {
+        console.log("error:", error);
+    }
+};

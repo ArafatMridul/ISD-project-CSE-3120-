@@ -5,7 +5,7 @@ const form = document.querySelector("#changePasswordForm");
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = localStorage.getItem("email");
+    const token = localStorage.getItem("token");
     const newPasswordValue = newPassword.value;
     const confirmPasswordValue = confirmPassword.value;
 
@@ -15,7 +15,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch(`http://localhost:5120/user/${email}`, {
+        const response = await fetch(`http://localhost:5120/user/${token}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

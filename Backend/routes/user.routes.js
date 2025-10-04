@@ -13,6 +13,6 @@ router.post("/signup", createNewUser);
 router.post("/login", loginAnExistingUser);
 router.get("/", getCurrentUserDetails);
 router.get("/:email", checkValidEmail);
-router.patch("/:email", changePassword);
+router.patch("/:token", changePassword);
 
 export default router;

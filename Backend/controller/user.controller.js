@@ -154,8 +154,11 @@ export const checkValidEmail = async (req, res) => {
  */
 
 export const changePassword = async (req, res) => {
-    const email = req.params.email;
+    const token = req.params.token;
     const { password: newPassword } = req.body;
+
+    const { id } = validateUserToken(token);
+    const { email } = await getUserByUserId(id);
 
     const { rowCount } = await changePassUsingEmail(email, newPassword);
 
