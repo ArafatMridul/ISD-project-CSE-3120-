@@ -33,7 +33,8 @@
         <!-- Navbar -->
 
         <section class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px]">
-            <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer" alt="" />
+            <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer" alt=""
+                onclick="window.location.href='index.html';" />
 
             <ul class="flex flex-col gap-[20px] lg:flex-row lg:gap-[50px] font-bold text-white text-center">
                 <li class="cursor-pointer">
@@ -42,14 +43,18 @@
                 <li class="cursor-pointer">
                     <a href="./facilities.html" class="hover:text-[#e0b973] duration-500 ease-in">Facilities</a>
                 </li>
-                <li class="cursor-pointer"><a href="./rooms.html" class="hover:text-[#e0b973] duration-500 ease-in">Rooms</a></li>
+                <li class="cursor-pointer"><a href="./rooms.html"
+                        class="hover:text-[#e0b973] duration-500 ease-in">Rooms</a></li>
                 <li class="cursor-pointer">
                     <a href="./contact.html" class="hover:text-[#e0b973] duration-500 ease-in">Contact Us</a>
                 </li>
-                <li class="cursor-pointer"><a href="./login.html" class="hover:text-[#e0b973] duration-500 ease-in">Login</a></li>
-                <li class="cursor-pointer">
+                <li class="login cursor-pointer"><a href="./login.html"
+                        class="hover:text-[#e0b973] duration-500 ease-in">Login</a></li>
+                <li class="signup cursor-pointer">
                     <a href="./signup.html" class="hover:text-[#e0b973] duration-500 ease-in">Signup</a>
                 </li>
+                <li class="dashboard cursor-pointer hidden"><a href="./userDashboard.html"
+                        class="hover:text-[#e0b973] duration-500 ease-in"></a></li>
             </ul>
         </section>
 
@@ -102,7 +107,8 @@
                     <!-- EXPLORE BUTTON -->
                     <div class="pt-8">
                         <button
-                            class="px-8 py-2 lg:px-16 lg:py-5 bg-[#E0B973] rounded-md font-bold hover:bg-[#131312] duration-500 ease-in cursor-pointer" onclick="window.location.href='rooms.html'">
+                            class="px-8 py-2 lg:px-16 lg:py-5 bg-[#E0B973] rounded-md font-bold hover:bg-[#131312] duration-500 ease-in cursor-pointer"
+                            onclick="window.location.href='rooms.html'">
                             <span class="text-white">EXPLORE</span>
                         </button>
                     </div>
@@ -131,7 +137,8 @@
                     <!-- EXPLORE BUTTON -->
                     <div class="pt-8">
                         <button
-                            class="px-8 py-2 lg:px-16 lg:py-5 bg-[#E0B973] rounded-md font-bold hover:bg-[#131312] duration-500 ease-in cursor-pointer" onclick="window.location.href='https://www.youtube.com/watch?v=gbgBs7dfJ-k';">
+                            class="px-8 py-2 lg:px-16 lg:py-5 bg-[#E0B973] rounded-md font-bold hover:bg-[#131312] duration-500 ease-in cursor-pointer"
+                            onclick="window.location.href='https://www.youtube.com/watch?v=gbgBs7dfJ-k';">
                             <span class="text-white">EXPLORE</span>
                         </button>
                     </div>
@@ -173,21 +180,27 @@
         <div class="flex gap-[50px]">
             <div>
                 <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
-                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">About Us</a></li>
-                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">Contact</a></li>
-                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">Terms & Conditions</a></li>
+                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">About
+                            Us</a></li>
+                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">Contact</a>
+                    </li>
+                    <li class="cursor-pointer"><a href="#" class="hover:text-[#e0b973] duration-500 ease-in">Terms &
+                            Conditions</a></li>
                 </ul>
             </div>
             <div>
                 <ul class="flex flex-col gap-[10px] text-[16px] text-white font-bold">
                     <li class="cursor-pointer">
-                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i
+                                class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
                     </li>
                     <li class="cursor-pointer">
-                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a>
+                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i
+                                class="fa-brands fa-twitter"></i><span>Twitter</span></a>
                     </li>
                     <li class="cursor-pointer">
-                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                        <a href="#" class="flex gap-[20px] items-center hover:text-[#e0b973] duration-500 ease-in"><i
+                                class="fa-brands fa-instagram"></i><span>Instagram</span></a>
                     </li>
                 </ul>
             </div>
@@ -205,16 +218,7 @@
             </form>
         </div>
     </footer>
-    <script>
-        // Booking Functionality
-
-        const bookNow = document.querySelector(".bookNow");
-
-        bookNow.addEventListener("click", (e) => {
-            e.preventDefault();
-            window.location.href = "bookingPage.html";
-        });
-    </script>
+    <script src="../js/pages.js"></script>
 </body>
 
 </html>

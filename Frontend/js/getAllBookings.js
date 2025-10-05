@@ -78,7 +78,7 @@ const showBookings=(data)=>{
 
         const today=new Date().toLocaleDateString("en-CA");
         const checkOutDate=booking.checkOut;
-        if(today<=checkOutDate){
+        if(today<checkOutDate){
             li.appendChild(cancelBtn);
             upcoming.appendChild(li);
         }  
