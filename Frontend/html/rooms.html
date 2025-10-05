@@ -35,7 +35,8 @@
         <div class="absolute bg-black/40 inset-0 z-10"></div>
         <section
             class="flex flex-col items-center gap-[20px] mb-[100px] lg:flex-row lg:justify-around lg:mb-[150px] relative z-50">
-            <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer" alt="" />
+            <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer" alt=""
+                onclick="window.location.href='index.html';" />
 
             <ul class="flex flex-col gap-[20px] lg:flex-row lg:gap-[50px] font-bold text-white text-center">
                 <li class="cursor-pointer">
@@ -50,12 +51,13 @@
                 <li class="cursor-pointer">
                     <a href="./contact.html" class="hover:text-[#e0b973] duration-500 ease-in">Contact Us</a>
                 </li>
-                <li class="cursor-pointer">
-                    <a href="./login.html" class="hover:text-[#e0b973] duration-500 ease-in">Login</a>
-                </li>
-                <li class="cursor-pointer">
+                <li class="login cursor-pointer"><a href="./login.html"
+                        class="hover:text-[#e0b973] duration-500 ease-in">Login</a></li>
+                <li class="signup cursor-pointer">
                     <a href="./signup.html" class="hover:text-[#e0b973] duration-500 ease-in">Signup</a>
                 </li>
+                <li class="dashboard cursor-pointer hidden"><a href="./userDashboard.html"
+                        class="hover:text-[#e0b973] duration-500 ease-in"></a></li>
             </ul>
         </section>
 
@@ -183,14 +185,16 @@
             <p class="roomName text-center text-3xl font-extrabold text-[#14274A]"></p>
             <p class="roomDescription text-center w-full text-[15px] text-black"></p>
             <div class="modal-action flex justify-between items-center w-full">
-                <p class="roomPrice bg-[#E0B973] hover:bg-[#131312] text-white duration-500 ease-in cursor-pointer px-8 py-2 rounded-md"></p>
+                <p
+                    class="roomPrice bg-[#E0B973] hover:bg-[#131312] text-white duration-500 ease-in cursor-pointer px-8 py-2 rounded-md">
+                </p>
                 <form method="dialog">
                     <button class="btn">Close</button>
                 </form>
             </div>
         </div>
     </dialog>
-
+    <script src="../js/pages.js"></script>
     <script src="../js/rooms.js"></script>
 </body>
 
