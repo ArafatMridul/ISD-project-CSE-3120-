@@ -20,6 +20,39 @@ const loadRooms = (data) => {
     // console.log(roomContainer);
 };
 
+// Handling valid checkin and checkout date
+
+const cIn=document.querySelector("#checkIn");
+const cOut=document.querySelector("#checkOut");
+
+const today=new Date();
+today.setDate(today.getDate()+1);
+
+const year=today.getFullYear()
+const month=(today.getMonth()+1).toString().padStart(2,"0");
+const date=(today.getDate()).toString().padStart(2,"0");
+const minCheckIn=`${year}-${month}-${date}`;
+
+cIn.setAttribute("min",minCheckIn);
+
+cIn.addEventListener("change",(e)=>{
+    e.preventDefault();
+    if(!cIn.value)
+        return;
+    const checkInDate=new Date(cIn.value);
+    checkInDate.setDate(checkInDate.getDate()+1);
+
+    const year=checkInDate.getFullYear()
+    const month=(checkInDate.getMonth()+1).toString().padStart(2,"0");
+    const date=(checkInDate.getDate()).toString().padStart(2,"0");
+    const minCheckOut=`${year}-${month}-${date}`;
+
+    cOut.value="";
+    cOut.setAttribute("min",minCheckOut);
+});
+
+// Backend
+
 let inputs = { name: "", checkIn: "", checkOut: "", roomType: "", price: null };
 
 // Booking confirmation
