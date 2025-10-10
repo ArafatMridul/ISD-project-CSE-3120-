@@ -1,8 +1,8 @@
 // create a button and make it to run the following function onclick
 
-export const getAllUsers = async () => {
+export const getAllBookings = async () => {
     try {
-        const response = await fetch("http://localhost:5120/admin/users", {
+        const response = await fetch("http://localhost:5120/admin/bookings", {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("admin_token")}`,
@@ -11,7 +11,7 @@ export const getAllUsers = async () => {
         });
         const data = response.json();
         if (data.success) {
-            // data.users ---> all user details
+            // data.users ---> all bookings details
         } else {
             // data.message ---> error message
         }
