@@ -12,11 +12,29 @@ export const createUserToken = async (payload) => {
 
     const payloadValidatedData = validationResult.data;
 
-    const token = jwt.sign(payloadValidatedData, JWT_SECRET , {expiresIn: "7d"});
+    const token = jwt.sign(payloadValidatedData, JWT_SECRET, {
+        expiresIn: "7d",
+    });
     return token;
 };
 
 export const validateUserToken = (token) => {
+    try {
+        const payload = jwt.verify(token, JWT_SECRET);
+        return payload;
+    } catch (error) {
+        return null;
+    }
+};
+
+export const createAdminToken = (payload) => {
+    const token = jwt.sign(payload, JWT_SECRET, {
+        expiresIn: "7d",
+    });
+    return token;
+};
+
+export const validateAdminToken = (token) => {
     try {
         const payload = jwt.verify(token, JWT_SECRET);
         return payload;
