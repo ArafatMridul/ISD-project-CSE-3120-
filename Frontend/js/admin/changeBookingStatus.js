@@ -1,7 +1,7 @@
 // make sure to pass "confirmed" or "pending" this 2 status ONLY!
 
-const bookingId = document.querySelector("{%BOOKING_ID%}").value;
-const newStatus = document.querySelector("{%CHANGED_STAUS%}").value;
+const bookingId = "91ee22e1-2f52-434a-a467-b4259754eedd";
+const newStatus = "confirmed";
 
 const changeBookingStatus = async () => {
     try {
@@ -21,10 +21,9 @@ const changeBookingStatus = async () => {
                 }),
             }
         );
-        const data = response.json();
+        const data = await response.json();
         if (data.success) {
-            // data.success = true ---> status changed successfully
-            // data.message ---> holds message saying status changes.
+            console.log(data.message);
         } else {
             // data.success = false ---> status changed failed
             // data.message ---> error message
@@ -33,3 +32,5 @@ const changeBookingStatus = async () => {
         console.log(error);
     }
 };
+
+window.onload = changeBookingStatus();

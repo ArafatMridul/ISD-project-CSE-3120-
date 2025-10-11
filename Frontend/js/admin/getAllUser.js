@@ -1,5 +1,3 @@
-// create a button and make it to run the following function onclick
-
 export const getAllUsers = async () => {
     try {
         const response = await fetch("http://localhost:5120/admin/users", {
@@ -9,13 +7,15 @@ export const getAllUsers = async () => {
                 "Content-Type": "application/json",
             },
         });
-        const data = response.json();
+        const data = await response.json();
         if (data.success) {
-            // data.users ---> all user details
+            console.log(data.users);
         } else {
-            // data.message ---> error message
+            console.log(data.message)
         }
     } catch (error) {
         console.log(error);
     }
 };
+
+document.onload = getAllUsers();
