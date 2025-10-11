@@ -1,25 +1,19 @@
-// ADMIN_USERNAME: admin
-// ADMIN_PASSWORD: admin
-// ---> use input field to take username and password
+const form = document.querySelector("#adminLoginForm");
 
-const adminUserName = document.querySelector("{%USERNAME%}").value;
-const adminUserPassword = document.querySelector("{%PASSWORD%}").value;
-
-const loginAdmin = async () => {
+const loginAdmin = async (inputs) => {
     try {
         const response = await fetch("http://localhost:5120/admin/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                username: adminUserName,
-                password: adminUserPassword,
-            }),
+            body: JSON.stringify(inputs),
         });
-        const data = response.json();
+        const data = await response.json();
+        console.log(data);
         if (data.success) {
             localStorage.setItem("admin_token", data.token);
+            window.location.href = "./adminDashboard.html";
         } else {
             // ERROR IS SET IN data.message -> handle it in frontend
         }
@@ -27,3 +21,16 @@ const loginAdmin = async () => {
         console.log(error);
     }
 };
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    const username = email.split("@")[0];
+
+    const inputs = { username, password };
+    await loginAdmin(inputs);
+});

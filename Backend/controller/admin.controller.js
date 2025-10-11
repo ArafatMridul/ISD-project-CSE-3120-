@@ -17,7 +17,7 @@ export const adminLogin = (req, res) => {
             .json({ success: false, message: "Unable to authorize admin" });
     }
     const token = createAdminToken({ username: process.env.ADMIN_USERNAME });
-    return res.json({ suceess: true, token });
+    return res.json({ success: true, token });
 };
 
 export const getAllUsersInAdminPanel = async (req, res) => {
@@ -32,12 +32,12 @@ export const getAllUsersInAdminPanel = async (req, res) => {
         createdAt: item.createdAt,
     }));
 
-    return res.json({ suceess: true, users: filteredResult });
+    return res.json({ success: true, users: filteredResult });
 };
 
 export const getAllBookingsInAdminPanel = async (req, res) => {
     const result = await getAllBookings();
-    return res.json({ suceess: true, bookings: result });
+    return res.json({ success: true, bookings: result });
 };
 
 export const changeBookingStatusInAdminPanel = async (req, res) => {

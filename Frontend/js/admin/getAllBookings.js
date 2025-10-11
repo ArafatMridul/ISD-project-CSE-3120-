@@ -9,13 +9,15 @@ export const getAllBookings = async () => {
                 "Content-Type": "application/json",
             },
         });
-        const data = response.json();
+        const data = await response.json();
         if (data.success) {
-            // data.users ---> all bookings details
+            console.log(data.bookings);
         } else {
-            // data.message ---> error message
+            console.log(data.message);
         }
     } catch (error) {
         console.log(error);
     }
 };
+
+window.onload = getAllBookings();
