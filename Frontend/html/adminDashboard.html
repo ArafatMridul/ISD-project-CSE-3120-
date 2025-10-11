@@ -593,101 +593,11 @@
         </dialog>
 
         <script>
-            // Sample data - Replace with actual API calls
-            let guests = [
-                {
-                    id: 1,
-                    name: "John Doe",
-                    email: "john@example.com",
-                    contact: "+1234567890",
-                    status: "Active",
-                    gender: "Male",
-                    address: "123 Main St",
-                    dob: "1990-05-15",
-                },
-                {
-                    id: 2,
-                    name: "Jane Smith",
-                    email: "jane@example.com",
-                    contact: "+1234567891",
-                    status: "Active",
-                    gender: "Female",
-                    address: "456 Oak Ave",
-                    dob: "1985-08-22",
-                },
-                {
-                    id: 3,
-                    name: "Mike Johnson",
-                    email: "mike@example.com",
-                    contact: "+1234567892",
-                    status: "Inactive",
-                    gender: "Male",
-                    address: "789 Pine Rd",
-                    dob: "1992-03-10",
-                },
-            ];
+            let guests = [];
 
-            let bookings = [
-                {
-                    id: "BK001",
-                    guestName: "John Doe",
-                    roomType: "Deluxe Suite",
-                    checkIn: "2025-10-15",
-                    checkOut: "2025-10-20",
-                    status: "Confirmed",
-                },
-                {
-                    id: "BK002",
-                    guestName: "Jane Smith",
-                    roomType: "Single Room",
-                    checkIn: "2025-10-12",
-                    checkOut: "2025-10-14",
-                    status: "Pending",
-                },
-                {
-                    id: "BK003",
-                    guestName: "Mike Johnson",
-                    roomType: "Double Room",
-                    checkIn: "2025-09-20",
-                    checkOut: "2025-09-25",
-                    status: "Completed",
-                },
-            ];
+            let bookings = [];
 
-            let rooms = [
-                {
-                    id: 1,
-                    number: "101",
-                    type: "Single",
-                    price: 100,
-                    capacity: 1,
-                    status: "Available",
-                },
-                {
-                    id: 2,
-                    number: "102",
-                    type: "Double",
-                    price: 150,
-                    capacity: 2,
-                    status: "Occupied",
-                },
-                {
-                    id: 3,
-                    number: "201",
-                    type: "Suite",
-                    price: 300,
-                    capacity: 4,
-                    status: "Available",
-                },
-                {
-                    id: 4,
-                    number: "202",
-                    type: "Deluxe",
-                    price: 250,
-                    capacity: 3,
-                    status: "Available",
-                },
-            ];
+            let rooms = [];
 
             let staff = [
                 {
