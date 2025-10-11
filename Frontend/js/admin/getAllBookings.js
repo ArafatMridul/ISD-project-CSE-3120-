@@ -11,12 +11,14 @@ export const getAllBookings = async () => {
         });
         const data = await response.json();
         if (data.success) {
-            console.log(data.bookings);
+            return data.bookings;
         } else {
             console.log(data.message);
+            return [];
         }
     } catch (error) {
         console.log(error);
+        return [];
     }
 };
 

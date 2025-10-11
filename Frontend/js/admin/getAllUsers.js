@@ -9,12 +9,13 @@ export const getAllUsers = async () => {
         });
         const data = await response.json();
         if (data.success) {
-            console.log(data.users);
+            return data.users;
         } else {
-            console.log(data.message)
+            return [];
         }
     } catch (error) {
         console.log(error);
+        return [];
     }
 };
 
