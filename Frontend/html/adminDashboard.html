@@ -565,7 +565,7 @@
                     (guest) => `
                 <tr>
                     <td>${guest.id}</td>
-                    <td>${guest.name}</td>
+                    <td>${guest.firstName} ${guest.lastName}</td>
                     <td>${guest.email}</td>
                     <td>${guest.contact}</td>
                     <td><span class="badge ${guest.status === "Active"
@@ -668,7 +668,7 @@
                     (booking) => `
                 <tr>
                     <td>${booking.id}</td>
-                    <td>${booking.guestName}</td>
+                    <td>${booking.name}</td>
                     <td>${booking.roomType}</td>
                     <td>${booking.checkIn}</td>
                     <td>${booking.checkOut}</td>
@@ -727,7 +727,7 @@
                         (booking) => `
                 <tr>
                     <td>${booking.id}</td>
-                    <td>${booking.guestName}</td>
+                    <td>${booking.name}</td>
                     <td>${booking.roomType}</td>
                     <td>${booking.checkIn}</td>
                     <td>${booking.checkOut}</td>
@@ -793,7 +793,7 @@
         function viewBookingDetails(id) {
             const booking = bookings.find((b) => b.id === id);
             alert(
-                `Booking Details:\nID: ${booking.id}\nGuest: ${booking.guestName}\nRoom: ${booking.roomType}\nCheck-in: ${booking.checkIn}\nCheck-out: ${booking.checkOut}\nStatus: ${booking.status}`
+                `Booking Details:\nID: ${booking.id}\nGuest: ${booking.name}\nRoom: ${booking.roomType}\nCheck-in: ${booking.checkIn}\nCheck-out: ${booking.checkOut}\nStatus: ${booking.status}`
             );
         }
 
