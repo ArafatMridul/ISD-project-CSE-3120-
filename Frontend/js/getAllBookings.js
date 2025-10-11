@@ -69,8 +69,22 @@ const showBookings=(data)=>{
         infoDiv.appendChild(checkOutText);
 
         const cancelBtn=document.createElement("button");
-        cancelBtn.classList.add("cancel","w-full","max-w-[100px]","h-[30px]","bg-[#E0B973]","rounded-[10px]","cursor-pointer","hover:bg-[#131312]","duration-500","ease-in","text-white","font-bold");
+        cancelBtn.classList.add("cancel","w-full","max-w-[120px]","h-[30px]","bg-[#E0B973]","rounded-[10px]","cursor-pointer","hover:bg-[#131312]","duration-500","ease-in","text-white","font-bold");
         cancelBtn.innerText="Cancel";
+
+        const status=document.createElement("button");
+        status.classList.add("status","w-full","max-w-[120px]","h-[30px]","rounded-[10px]","text-black","font-bold","text-[12px]");
+        status.innerText=booking.status.toUpperCase();
+
+        const rightContainer=document.createElement("div");
+        rightContainer.classList.add("flex","flex-col","gap-[50px]","w-full","max-w-[50%]","items-end");
+        rightContainer.appendChild(status);
+        rightContainer.appendChild(cancelBtn);
+
+        if(status.innerText.toUpperCase()==="CONFIRMED")
+            status.classList.add("bg-[#90EE90]");
+        else
+            status.classList.add("bg-[#FF484C]");
 
         li.appendChild(infoDiv);
         // console.log(li);
@@ -79,7 +93,7 @@ const showBookings=(data)=>{
         const today=new Date().toLocaleDateString("en-CA");
         const checkOutDate=booking.checkOut;
         if(today<checkOutDate){
-            li.appendChild(cancelBtn);
+            li.appendChild(rightContainer);
             upcoming.appendChild(li);
         }  
         else
