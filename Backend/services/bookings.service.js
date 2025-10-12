@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import db from "../db/index.js";
 import { bookingsTable } from "../db/schema.js";
 
@@ -29,6 +29,20 @@ export const insertNewBooking = async ({
             userId,
             price,
         })
+        .returning({ id: bookingsTable.id });
+
+    return result;
+};
+
+export const deleteBookingEntry = async ({ bookingId, userId }) => {
+    const [result] = await db
+        .delete(bookingsTable)
+        .where(
+            and(
+                eq(bookingsTable.id, bookingId),
+                eq(bookingsTable.userId, userId)
+            )
+        )
         .returning({ id: bookingsTable.id });
 
     return result;
