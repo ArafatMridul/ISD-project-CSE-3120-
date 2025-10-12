@@ -1,224 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to Luxury Hotel</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Luxury Hotel</title>
+        <!-- Tailwind CDN and Daisy UI -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Tailwind CDN and Daisy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- Font Awesome -->
 
-    <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google Fonts -->
 
-    <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+        <!-- css -->
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="../css/style.css" />
-</head>
-
-<body class="monteserrat flex flex-col bg-[#F8F9FA] lg:flex-row">
-    <div class="drawer lg:drawer-open lg:w-auto">
-        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-        <div class="m-4">
-            <!-- Page content here -->
-            <label for="my-drawer-2"
-                class="cursor-pointer drawer-button bg-[#14274A] text-white p-2 rounded-md lg:invisible">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-        </div>
-        <div class="drawer-side">
-            <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu bg-base-200 text-base-content w-80 px-4 py-0 bg-[#14274A] min-h-full">
-                <!-- Sidebar content here -->
-                <div class="flex justify-between lg:justify-center">
-                    <img src="../assets/brand-logo.png" class="w-[128px] h-[74.24px] cursor-pointer mb-4"
-                        onclick="window.location.href='index.html';" alt="" />
-                    <i
-                        class="sidebarClose fa-solid fa-circle-xmark text-[20px] text-white hover:text-[#e0b973] cursor-pointer mt-[30px] lg:invisible"></i>
-                </div>
-
-                <li
-                    class="myProfile eb-garamond font-semibold text-[20px] text-[#e0b973] bg-[#131312] hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                    <span>My Profile</span>
-                </li>
-                <li
-                    class="myBookings eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                    <span>My Bookings</span>
-
-                </li>
-                <li
-                    class="bookNow eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                    <span>Book Now</span>
-                </li>
-                <li
-                    class="logout eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]">
-                    <span>Logout</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <main class="w-full h-auto lg:max-w-[70%] flex flex-col justify-center items-center mx-auto">
-        <!-- My Profile Section -->
-        <section
-            class="w-full max-w-[1200px] h-auto bg-white rounded-[10px] shadow-md flex flex-col items-center py-[50px] box-border">
-            <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]">Welcome, <span
-                    class="fullname" id="user">User</span>
-            </p>
-            <div class="w-full flex flex-col items-center gap-[22px] p-[30px] lg:flex-row lg:items-start">
-                <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center">
-                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
-                        <label class="text-[15px] font-semibold">Full Name</label>
-                        <p id="fname"
-                            class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
-                            First Name</p>
-                    </div>
-                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
-                        <label class="text-[15px] font-semibold">Email Address</label>
-                        <p id="email"
-                            class="emailAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
-                            Email Address</p>
-                    </div>
-                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
-                        <label class="text-[15px] font-semibold">Contact Number</label>
-                        <p
-                            class="contactNumber bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
-                            Contact Number</p>
-                    </div>
-                </div>
-
-
-                <div class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center">
-                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
-                        <label class="text-[15px] font-semibold">Gender</label>
-                        <p
-                            class="gender bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
-                            Gender</p>
-                    </div>
-                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
-                        <label class="text-[15px] font-semibold">Present Address</label>
-                        <p
-                            class="presentAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
-                            Present Address</p>
-                    </div>
-                    <div class="w-full max-w-[500px] flex flex-col gap-[10px]">
-                        <label class="text-[15px] font-semibold">Date of Birth</label>
-                        <p
-                            class="dob bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]">
-                            Date of Birth</p>
-                    </div>
-                </div>
+    <body class="monteserrat flex flex-col bg-[#F8F9FA] lg:flex-row">
+        <div class="drawer lg:drawer-open lg:w-auto">
+            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+            <div class="m-4">
+                <!-- Page content here -->
+                <label
+                    for="my-drawer-2"
+                    class="cursor-pointer drawer-button bg-[#14274A] text-white p-2 rounded-md lg:invisible"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </label>
             </div>
-            <div class="w-full eb-garamond flex flex-col gap-[10px] lg:flex-row lg:gap-0">
-                <button onclick="window.location.href='changepassword.html';"
-                    class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">
-                    Change Password
-                </button>
-                <button
-                    class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold"
-                    onclick="my_modal_4.showModal()">
-                    Edit Profile
-                </button>
-            </div>
-        </section>
-
-        <!-- My Bookings Section -->
-
-        <section class="w-full max-w-[1200px] min-h-[100vh] bg-[#F8F9FA] hidden flex-col items-center box-border">
-            <div class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]">
-                <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]">My Upcoming
-                    Bookings
-                </p>
+            <div class="drawer-side">
+                <label
+                    for="my-drawer-2"
+                    aria-label="close sidebar"
+                    class="drawer-overlay"
+                ></label>
                 <ul
-                    class="upcomingBookingscontainer eb-garamond w-full flex flex-col items-center gap-[10px] px-[10px] box-border">
+                    class="menu bg-base-200 text-base-content w-80 px-4 py-0 bg-[#14274A] min-h-full"
+                >
+                    <!-- Sidebar content here -->
+                    <div class="flex justify-between lg:justify-center">
+                        <img
+                            src="../assets/brand-logo.png"
+                            class="w-[128px] h-[74.24px] cursor-pointer mb-4"
+                            onclick="window.location.href='index.html';"
+                            alt=""
+                        />
+                        <i
+                            class="sidebarClose fa-solid fa-circle-xmark text-[20px] text-white hover:text-[#e0b973] cursor-pointer mt-[30px] lg:invisible"
+                        ></i>
+                    </div>
 
+                    <li
+                        class="myProfile eb-garamond font-semibold text-[20px] text-[#e0b973] bg-[#131312] hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]"
+                    >
+                        <span>My Profile</span>
+                    </li>
+                    <li
+                        class="myBookings eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]"
+                    >
+                        <span>My Bookings</span>
+                    </li>
+                    <li
+                        class="bookNow eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]"
+                    >
+                        <span>Book Now</span>
+                    </li>
+                    <li
+                        class="logout eb-garamond font-semibold text-[20px] text-white hover:text-[#e0b973] hover:bg-[#131312] rounded-[10px] mb-[5px]"
+                    >
+                        <span>Logout</span>
+                    </li>
                 </ul>
             </div>
-            <div class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]">
-                <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]">My Previous
-                    Bookings
+        </div>
+
+        <main
+            class="w-full h-auto lg:max-w-[70%] flex flex-col justify-center items-center mx-auto"
+        >
+            <!-- My Profile Section -->
+            <section
+                class="w-full max-w-[1200px] h-auto bg-white rounded-[10px] shadow-md flex flex-col items-center py-[50px] box-border"
+            >
+                <p
+                    class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]"
+                >
+                    Welcome, <span class="fullname" id="user">User</span>
                 </p>
-                <ul
-                    class="previousBookingscontainer eb-garamond w-full flex flex-col items-center gap-[10px] px-[10px] box-border">
-
-                </ul>
-            </div>
-        </section>
-
-        <!-- Modal for Edit Profile -->
-        <dialog id="my_modal_4" class="modal">
-
-            <div class="modal-box w-full max-w-5xl flex flex-col items-center">
-                <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]">Edit Profile
-                </p>
-                <form action="" class="w-full max-w-[500px] flex flex-col items-center gap-[20px]">
-                    <div class="w-full flex flex-col">
-                        <label for="fullname" class="text-[15px] font-semibold  mb-[15px]">Full Name</label>
-                        <input type="text" name="fullname" placeholder="Full Name"
-                            class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px] border-none focus:outline-none">
+                <div
+                    class="w-full flex flex-col items-center gap-[22px] p-[30px] lg:flex-row lg:items-start"
+                >
+                    <div
+                        class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center"
+                    >
+                        <div
+                            class="w-full max-w-[500px] flex flex-col gap-[10px]"
+                        >
+                            <label class="text-[15px] font-semibold"
+                                >Full Name</label
+                            >
+                            <p
+                                id="fname"
+                                class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]"
+                            >
+                                First Name
+                            </p>
+                        </div>
+                        <div
+                            class="w-full max-w-[500px] flex flex-col gap-[10px]"
+                        >
+                            <label class="text-[15px] font-semibold"
+                                >Email Address</label
+                            >
+                            <p
+                                id="email"
+                                class="emailAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]"
+                            >
+                                Email Address
+                            </p>
+                        </div>
+                        <div
+                            class="w-full max-w-[500px] flex flex-col gap-[10px]"
+                        >
+                            <label class="text-[15px] font-semibold"
+                                >Contact Number</label
+                            >
+                            <p
+                                class="contactNumber bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]"
+                            >
+                                Contact Number
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="w-full flex flex-col">
-                        <label for="contactNumber" class="text-[15px] font-semibold  mb-[15px]">Contact Number</label>
-                        <input type="text" name="contactNumber" placeholder="Contact Number"
-                            class="contactNumber bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px] border-none focus:outline-none">
+                    <div
+                        class="w-full lg:max-w-[50%] flex flex-col gap-[20px] items-center"
+                    >
+                        <div
+                            class="w-full max-w-[500px] flex flex-col gap-[10px]"
+                        >
+                            <label class="text-[15px] font-semibold"
+                                >Gender</label
+                            >
+                            <p
+                                class="gender bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]"
+                            >
+                                Gender
+                            </p>
+                        </div>
+                        <div
+                            class="w-full max-w-[500px] flex flex-col gap-[10px]"
+                        >
+                            <label class="text-[15px] font-semibold"
+                                >Present Address</label
+                            >
+                            <p
+                                class="presentAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]"
+                            >
+                                Present Address
+                            </p>
+                        </div>
+                        <div
+                            class="w-full max-w-[500px] flex flex-col gap-[10px]"
+                        >
+                            <label class="text-[15px] font-semibold"
+                                >Date of Birth</label
+                            >
+                            <p
+                                class="dob bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px]"
+                            >
+                                Date of Birth
+                            </p>
+                        </div>
                     </div>
-                    <div class="w-full flex flex-col">
-                        <label for="presentAddress" class="text-[15px] font-semibold  mb-[15px]">Present Address</label>
-                        <input type="text" id="presentAddress" name="presentAddress" placeholder="Present Address"
-                            class="presentAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px] border-none focus:outline-none">
-                    </div>
-                    <p class="eb-garamond w-full font-bold text-center max-w-[572px] text-[15px]">N.B: You cannot change
-                        Email Address, Gender and Date of Birth</p>
-                </form>
-                <div class="modal-action w-full flex max-w-[500px] justify-between m-0 mt-[24px]">
-
-                    <div class="w-full max-w-[200px]">
-                        <!-- Update in Database should be triggered from Here -->
-                        <button
-                            class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">Update</button>
-                    </div>
-
-                    <form method="dialog" class="w-full max-w-[200px]">
-
-                        <button
-                            class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold">Close</button>
-                    </form>
                 </div>
-            </div>
-        </dialog>
-
-        <!-- Modal for Logout -->
-        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box">
-                <p class="py-4">Are you sure you want to logout?</p>
-                <div class="modal-action">
-                    <div>
-                        <button class="btn" id="logout">Yes</button>
-                    </div>
-                    <form method="dialog">
-                        <button class="btn">No</button>
-                    </form>
+                <div
+                    class="w-full eb-garamond flex flex-col gap-[10px] lg:flex-row lg:gap-0"
+                >
+                    <button
+                        onclick="window.location.href='changepassword.html';"
+                        class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold"
+                    >
+                        Change Password
+                    </button>
+                    <button
+                        class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] mx-auto cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold"
+                        onclick="my_modal_4.showModal()"
+                    >
+                        Edit Profile
+                    </button>
                 </div>
-            </div>
-        </dialog>
+            </section>
 
+            <!-- My Bookings Section -->
 
-    </main>
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/getAllBookings.js"></script>
-</body>
+            <section
+                class="w-full max-w-[1200px] min-h-[100vh] bg-[#F8F9FA] hidden flex-col items-center box-border"
+            >
+                <div
+                    class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]"
+                >
+                    <p
+                        class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]"
+                    >
+                        My Upcoming Bookings
+                    </p>
+                    <ul
+                        class="upcomingBookingscontainer eb-garamond w-full flex flex-col items-center gap-[10px] px-[10px] box-border"
+                    ></ul>
+                </div>
+                <div
+                    class="w-full bg-white rounded-[10px] flex flex-col items-center py-[50px] box-border mb-[20px]"
+                >
+                    <p
+                        class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px] mb-[20px]"
+                    >
+                        My Previous Bookings
+                    </p>
+                    <ul
+                        class="previousBookingscontainer eb-garamond w-full flex flex-col items-center gap-[10px] px-[10px] box-border"
+                    ></ul>
+                </div>
+            </section>
 
+            <!-- Modal for Edit Profile -->
+            <dialog id="my_modal_4" class="modal">
+                <div
+                    class="modal-box w-full max-w-5xl flex flex-col items-center"
+                >
+                    <p
+                        class="eb-garamond w-full font-bold text-center max-w-[572px] text-[25px]"
+                    >
+                        Edit Profile
+                    </p>
+                    <form
+                        action=""
+                        class="w-full max-w-[500px] flex flex-col items-center gap-[20px]"
+                    >
+                        <div class="w-full flex flex-col">
+                            <label
+                                for="fullname"
+                                class="text-[15px] font-semibold mb-[15px]"
+                                >Full Name</label
+                            >
+                            <input
+                                type="text"
+                                name="fullname"
+                                placeholder="Full Name"
+                                class="fullname bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px] border-none focus:outline-none"
+                            />
+                        </div>
+
+                        <div class="w-full flex flex-col">
+                            <label
+                                for="contactNumber"
+                                class="text-[15px] font-semibold mb-[15px]"
+                                >Contact Number</label
+                            >
+                            <input
+                                type="text"
+                                name="contactNumber"
+                                placeholder="Contact Number"
+                                class="contactNumber bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px] border-none focus:outline-none"
+                            />
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <label
+                                for="presentAddress"
+                                class="text-[15px] font-semibold mb-[15px]"
+                                >Present Address</label
+                            >
+                            <input
+                                type="text"
+                                id="presentAddress"
+                                name="presentAddress"
+                                placeholder="Present Address"
+                                class="presentAddress bg-[#fcf2df] w-full max-w-[500px] h-[49px] text-[15px] rounded-[10px] box-border p-[13px] border-none focus:outline-none"
+                            />
+                        </div>
+                        <p
+                            class="eb-garamond w-full font-bold text-center max-w-[572px] text-[15px]"
+                        >
+                            N.B: You cannot change Email Address, Gender and
+                            Date of Birth
+                        </p>
+                    </form>
+                    <div
+                        class="modal-action w-full flex max-w-[500px] justify-between m-0 mt-[24px]"
+                    >
+                        <div class="w-full max-w-[200px]">
+                            <!-- Update in Database should be triggered from Here -->
+                            <button
+                                class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold"
+                            >
+                                Update
+                            </button>
+                        </div>
+
+                        <form method="dialog" class="w-full max-w-[200px]">
+                            <button
+                                class="w-full max-w-[200px] h-[60px] bg-[#E0B973] flex justify-center items-center gap-[18px] rounded-[10px] cursor-pointer hover:bg-[#131312] duration-500 ease-in text-white font-bold"
+                            >
+                                Close
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Modal for Logout -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <p class="py-4">Are you sure you want to logout?</p>
+                    <div class="modal-action">
+                        <div>
+                            <button class="btn" id="logout">Yes</button>
+                        </div>
+                        <form method="dialog">
+                            <button class="btn">No</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </main>
+        <script src="../js/dashboard.js"></script>
+        <script src="../js/getAllBookings.js"></script>
+    </body>
 </html>
