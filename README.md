@@ -81,9 +81,9 @@ The system uses two main tables:
 
 ## 👥 Contributors
 
--   **Pritom Banik** – Project manager & main designer
--   **A. K. M Samioul Islam Rian** – Frontend Developer
--   **Arafat Mridul** – Backend Developer
+-   **[Pritom Banik](https://github.com/pritom-banik)** – Project Manager & Frontend Designer
+-   **[A. K. M Samioul Islam](https://github.com/Samioul51)** – Frontend Developer
+-   **[Arafat Mridul](https://github.com/ArafatMridul)** – Backend Developer
 
 ---
 
